@@ -1,37 +1,38 @@
 import requests
 import bs4
+from vulelement import VulnerabilityElement
 
-def parseRow(rowHtml):
-    tdElems = rowHtml.find_all('td')
-    for item in tdElems:
-        print(item.get_text().encode('utf-8').decode('utf-8'))
-
-    aElems = rowHtml.find_all('a')
-    for a in aElems:
-        print(a['href'])
+lenovoSupportHome = 'http://support.lenovo.com'
 
 
+def clearStr(inputStr):
+    return repr(inputStr.replace('\n', '')
+                        .replace('\\xa0', '')
+                        .replace(':', '')
+                        .strip())
 
 
-class VulnerabilityElement():
-    """ VulnerabilityElement
-        is used to describe the vulnerability of Lenovo monitored
-    """
-    lenovoCode = ""
-    description = ""
-    link = ""
-    firstPublishedDate = ""
-    lastUpdatedDate = ""
-    severity = ""
-    cveCode = ""
+def parseRow(tableRow):
+    lenovoCode  = ''
+    description = ''
+    link        = ''
+    firstDate   = ''
+    lastDate    = ''
 
-    def __init__(self, code, description, link, firstDate, lastDate):
-        self.lenovoCode = code
-        self.description = description
-        self.link = link
-        self.firstPublishedDate = firstDate
-        self.lastUpdatedDate = lastDate
+    tdElems     = tableRow.find_all('td')
+    strs        = list(tdElems[0].strings)
+    lenovoCode  = clearStr(strs[0])
+    description = clearStr(strs[1])
 
+    aElems  = tdElems[0].find_all('a')
+    link    = lenovoSupportHome + aElems[0]['href']
+
+    firstDate   = clearStr(tdElems[1].string)
+    lastDate    = clearStr(tdElems[2].string)
+
+    ve = VulnerabilityElement(lenovoCode, description,
+        link, firstDate, lastDate)
+    print(ve.to_json())
 
 
 response = requests.get('http://support.lenovo.com/us/en/product_security')
