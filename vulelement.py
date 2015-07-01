@@ -12,7 +12,7 @@ class VulnerabilityElement():
     firstPublishedDate = ""
     lastUpdatedDate = ""
     severity = ""
-    cveCode = ""
+    cveCodes = []
 
     def __init__(self, code, description, link, firstDate, lastDate):
         self.lenovoCode = code

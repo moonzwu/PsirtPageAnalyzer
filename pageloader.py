@@ -1,9 +1,12 @@
 import requests
 import bs4
+import html2text
+import re
 from vulelement import VulnerabilityElement
 
 lenovoSupportHome = 'http://support.lenovo.com'
 severityFlag = 'Severity:'
+cveRep = r'CVE-\d{4}-\d{4}'
 
 vulCollection = {}
 
@@ -49,20 +52,18 @@ def parseVulTable(vulTable):
         parseVulRow(items[index])
 
 def parseVulDetail(lenovoCode, content):
-    pElems = content.find_all('p')
-    pContent = pElems[1]
-    contentText = pContent.get_text()
+    contentText = html2text.html2text(content.get_text()) # convert to pure text
     startPos = contentText.find(severityFlag)
-    endPos   = contentText.find('\n\n', startPos)
+    endPos   = contentText.find(' ', startPos + len(severityFlag) + 1)
     severity = contentText[startPos + len(severityFlag) + 1 : endPos]
     vulCollection[lenovoCode].severity = severity
 
-    ulElems = content.find_all('ul')
-    cveCode = clearStr(ulElems[1].li.string)
-    vulCollection[lenovoCode].cveCode = cveCode
+    cveCodes = re.search(cveRep, contentText, re.M|re.I)
+    vulCollection[lenovoCode].cveCodes.extend(cveCodes)
 
 
 def loadContentPage(url):
+    print("loading " + url)
     response = requests.get(url)
     soup = bs4.BeautifulSoup(response.text)
     content = soup.select('div.content-wrapper')[0]
