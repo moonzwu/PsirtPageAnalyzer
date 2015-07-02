@@ -2,7 +2,9 @@ import requests
 import bs4
 import html2text
 import re
+from multiprocessing import Pool
 from vulelement import VulnerabilityElement
+
 
 lenovoSupportHome = 'http://support.lenovo.com'
 severityFlag = 'Severity:'
@@ -16,10 +18,10 @@ def clearStr(inputStr):
         return ''
     else:
         # print(inputStr.encode('utf-8'))
-        return repr(inputStr.replace('\n', '')
-                        .replace('\\xa0', '')
-                        .replace(':', '')
-                        .strip())
+        return inputStr.replace('\n', '').replace('\\xa0', '').replace(':', '').strip()
+
+def extractCVEcode(contentText):
+    return re.findall(cveRep, contentText, re.M|re.I)
 
 
 def parseVulRow(tableRow):
@@ -48,6 +50,8 @@ def parseVulRow(tableRow):
 
 def parseVulTable(vulTable):
     items = vulTable.find_all('tr')
+
+    #skip the table header line
     for index in range(1, len(items)):
         parseVulRow(items[index])
 
@@ -58,8 +62,8 @@ def parseVulDetail(lenovoCode, content):
     severity = contentText[startPos + len(severityFlag) + 1 : endPos]
     vulCollection[lenovoCode].severity = severity
 
-    cveCodes = re.search(cveRep, contentText, re.M|re.I)
-    vulCollection[lenovoCode].cveCodes.extend(cveCodes)
+    cveCodes = extractCVEcode(contentText)
+    vulCollection[lenovoCode].cveCodes = repr(cveCodes)
 
 
 def loadContentPage(url):
@@ -69,13 +73,20 @@ def loadContentPage(url):
     content = soup.select('div.content-wrapper')[0]
     return content
 
-
-
-homeContent = loadContentPage('http://support.lenovo.com/us/en/product_security')
-parseVulTable(homeContent.table)
-
-# go though all vulnerability element
-for vul in vulCollection.values():
+def processDetailPage(vul):
     content = loadContentPage(vul.link)
     parseVulDetail(vul.lenovoCode, content)
-    print(vulCollection[vul.lenovoCode].to_json())
+
+if __name__ == '__main__' :
+    homeContent = loadContentPage('http://support.lenovo.com/us/en/product_security')
+    parseVulTable(homeContent.table)
+
+    # go though all vulnerability element
+    pool = Pool(16)
+    values = vulCollection.values()
+    pool.map(processDetailPage, values)
+    pool.close()
+    pool.join()
+
+    for vul in vulCollection.values():
+        print(vulCollection[vul.lenovoCode].to_json())
