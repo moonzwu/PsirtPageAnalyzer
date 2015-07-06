@@ -2,6 +2,7 @@ import unittest
 import bs4
 from pagecreeper import *;
 
+
 class PageCreeperTest(unittest.TestCase):
     """test PageCreeper class functions"""
 
@@ -35,6 +36,15 @@ class PageCreeperTest(unittest.TestCase):
             print(index)
         else:
             print(repr(elem))
+
+    def test_deal_with_the_no_BU_items_page(self):
+        file = open("testdata/lenovo_fpr.htm", "r")
+        html = file.read()
+        file.close()
+        soup = bs4.BeautifulSoup(html)
+        contentNum = len(soup.select('div.content-wrapper'))
+
+        self.assertEqual(1, contentNum)
 
 
 

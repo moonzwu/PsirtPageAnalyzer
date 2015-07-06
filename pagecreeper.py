@@ -3,9 +3,10 @@ import bs4
 import html2text
 import re
 import logging
+from requests.exceptions import *
 from multiprocessing import Pool
 from vulelement import VulnerabilityElement
-
+from businessunit import BusinessUnit
 
 lenovoSupportHome = 'http://support.lenovo.com'
 severityFlag = 'Severity:'
@@ -58,15 +59,34 @@ def parseVulDetail(vul, content):
 
     cveCodes = extractCVEcode(contentText)
     vul.cveCodes = repr(cveCodes)
-    print(vul.to_json())
+    #print(vul.to_json())
+
+    parseBUDetail(vul.lenovoCode, content)
+
+
+def parseBUDetail(lenovoCode, content):
+    buList = []
+    buAndProdsElem = content.find_all(id='NewTileListComponent')
+    if buAndProdsElem is not None and len(buAndProdsElem) > 0:
+        for ulElem in buAndProdsElem[0].find_all('ul'):
+            for liElem in ulElem.find_all('li'):
+                bu = BusinessUnit(liElem.get_text(), lenovoCode, liElem['itemindex'])
+                buList.append(bu)
+        print(len(buList))
+
 
 
 def loadContentPage(url):
     print("loading " + url)
-    response = requests.get(url)
-    soup = bs4.BeautifulSoup(response.text)
-    content = soup.select('div.content-wrapper')[0]
-    return content
+    for i in range(3):
+        try:
+            response = requests.get(url, timeout=30)
+            soup = bs4.BeautifulSoup(response.text)
+            content = soup.select('div.content-wrapper')[0]
+            return content
+        except (ReadTimeout, Timeout, ConnectTimeout):
+            print("get a timeout exception")
+            continue
 
 def processDetailPage(vul):
     try:
