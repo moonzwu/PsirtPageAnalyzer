@@ -2,6 +2,7 @@ import requests
 import bs4
 import html2text
 import re
+import logging
 from multiprocessing import Pool
 from vulelement import VulnerabilityElement
 
@@ -25,12 +26,6 @@ def extractCVEcode(contentText):
 
 
 def parseVulRow(tableRow):
-    lenovoCode  = ''
-    description = ''
-    link        = ''
-    firstDate   = ''
-    lastDate    = ''
-
     tdElems     = tableRow.find_all('td')
     strs        = list(tdElems[0].strings)
     lenovoCode  = clearStr(strs[0])
@@ -44,7 +39,6 @@ def parseVulRow(tableRow):
 
     ve = VulnerabilityElement(lenovoCode, description,
         link, firstDate, lastDate)
-    #print(ve.to_json())
     vulCollection[lenovoCode] = ve
 
 
@@ -55,15 +49,16 @@ def parseVulTable(vulTable):
     for index in range(1, len(items)):
         parseVulRow(items[index])
 
-def parseVulDetail(lenovoCode, content):
+def parseVulDetail(vul, content):
     contentText = html2text.html2text(content.get_text()) # convert to pure text
     startPos = contentText.find(severityFlag)
     endPos   = contentText.find(' ', startPos + len(severityFlag) + 1)
     severity = contentText[startPos + len(severityFlag) + 1 : endPos]
-    vulCollection[lenovoCode].severity = severity
+    vul.severity = severity
 
     cveCodes = extractCVEcode(contentText)
-    vulCollection[lenovoCode].cveCodes = repr(cveCodes)
+    vul.cveCodes = repr(cveCodes)
+    print(vul.to_json())
 
 
 def loadContentPage(url):
@@ -74,8 +69,11 @@ def loadContentPage(url):
     return content
 
 def processDetailPage(vul):
-    content = loadContentPage(vul.link)
-    parseVulDetail(vul.lenovoCode, content)
+    try:
+        content = loadContentPage(vul.link)
+        parseVulDetail(vul, content)
+    except Exception:
+        logging.exception("arg is %s" % vul.lenovoCode)
 
 if __name__ == '__main__' :
     homeContent = loadContentPage('http://support.lenovo.com/us/en/product_security')
@@ -83,10 +81,9 @@ if __name__ == '__main__' :
 
     # go though all vulnerability element
     pool = Pool(16)
-    values = vulCollection.values()
-    pool.map(processDetailPage, values)
+    pool.map(processDetailPage, vulCollection.values())
     pool.close()
     pool.join()
 
-    for vul in vulCollection.values():
-        print(vulCollection[vul.lenovoCode].to_json())
+    # for vul in vulCollection.values():
+    #     print(vulCollection[vul.lenovoCode].to_json())

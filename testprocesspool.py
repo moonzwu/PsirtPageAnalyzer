@@ -8,6 +8,7 @@ def callback(y):
     print(repr(y))
     print(y)
 
+
 class PoolTest(unittest.TestCase):
 
 
@@ -26,6 +27,8 @@ class PoolTest(unittest.TestCase):
 
         pool.close()
         pool.join()
+
+
 
 
 if __name__ == "__main__" :
