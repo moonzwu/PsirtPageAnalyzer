@@ -6,6 +6,13 @@ from pagecreeper import *;
 class PageCreeperTest(unittest.TestCase):
     """test PageCreeper class functions"""
 
+    def createSoupByTestFile(self, htmFile="testdata/lenovo_fpr.htm"):
+        file = open(htmFile, "r")
+        html = file.read()
+        file.close()
+        soup = bs4.BeautifulSoup(html)
+        return soup
+
     def test_get_single_cvecode_from_page_content(self):
         contextText = 'Hello world CVE ID: CVE-2015-1170 I am working'
         cveCodes = extractCVEcode(contextText)
@@ -37,16 +44,18 @@ class PageCreeperTest(unittest.TestCase):
         else:
             print(repr(elem))
 
+    def test_get_products_by_BU_object(self):
+        soup = self.createSoupByTestFile('testdata/S3.htm')
+        productsBlock = soup.find_all('div', id='NewTileListContent')
+        bu = BusinessUnit('ThinkServer & Storage', 'LEN-2014-006', '000b1675_f972_494d_903d_22379095ac7a_0_3')
+        products = parseProductsDetail(bu, productsBlock[0])
+        self.assertEqual(len(products), 17)
+        self.assertEqual(products[0].name, 'ThinkServer    RD330')
+
     def test_deal_with_the_no_BU_items_page(self):
-        file = open("testdata/lenovo_fpr.htm", "r")
-        html = file.read()
-        file.close()
-        soup = bs4.BeautifulSoup(html)
+        soup = self.createSoupByTestFile()
         contentNum = len(soup.select('div.content-wrapper'))
-
         self.assertEqual(1, contentNum)
-
-
 
 
 if __name__ == "__main__":

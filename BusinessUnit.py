@@ -1,15 +1,16 @@
 import json
 
+
 class BusinessUnit():
     '''
      the BusinessUnit class is used to describe the relationship of
      vulnerability and device
     '''
 
-    name            = ''
-    itemIndex       = ''
-    lenovoCode      = ''
-    productList     = []
+    name = ''
+    itemIndex = ''
+    lenovoCode = ''
+    productList = []
 
     def __init__(self, name, lenovoCode, itemIndex):
         self.name = name
