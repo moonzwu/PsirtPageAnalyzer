@@ -24,33 +24,22 @@ class PageCreeperTest(unittest.TestCase):
         cveCodes = extractCVEcode(contextText)
         self.assertEqual(len(cveCodes), 2)
 
-    def test_locate_the_item_by_BU_name(self):
-        html = '''
-                <li role="tab" aria-controls="tab_item-3" class="cell2 resp-tab-item" itemindex="84bca948_c26a_45e4_8ebb_fa1d8c759d19_0_3">
-                    <div class="contactUs-tile gray-bg" style="height: 48px;">
-                    <div class="fluid-row">
-                    <div class="cell8 stack-fix contactUs-tile-label">ThinkServer &amp; Storage</div>
-                    </div>
-                    </div>
-                </li>
-                '''
-        soup = bs4.BeautifulSoup(html)
-        buName = 'ThinkServer & Storage'
-        liElem = soup.select('li')[0]
-        elem = liElem.find_all(text=buName)
-        if elem is not None:
-            index = liElem['itemindex']
-            print(index)
-        else:
-            print(repr(elem))
-
     def test_get_products_by_BU_object(self):
         soup = self.createSoupByTestFile('testdata/S3.htm')
-        productsBlock = soup.find_all('div', id='NewTileListContent')
+        productsBlockList = soup.find_all('div', id='NewTileListContent')
         bu = BusinessUnit('ThinkServer & Storage', 'LEN-2014-006', '000b1675_f972_494d_903d_22379095ac7a_0_3')
-        products = parseProductsDetail(bu, productsBlock[0])
+        products = parseProductsDetail(bu, productsBlockList)
         self.assertEqual(len(products), 17)
         self.assertEqual(products[0].name, 'ThinkServer    RD330')
+
+    def test_get_products_in_the_software_category(self):
+        soup = self.createSoupByTestFile('testdata/S3.htm')
+        productsBlockList = soup.find_all('div', id='NewTileListContent')
+        bu = BusinessUnit('Software', 'LEN-2014-006', '000b1675_f972_494d_903d_22379095ac7a_1_1')
+        products = parseProductsDetail(bu, productsBlockList)
+        self.assertEqual(len(products), 9)
+        self.assertEqual(products[1].name, 'Diagnostic')
+
 
     def test_deal_with_the_no_BU_items_page(self):
         soup = self.createSoupByTestFile()

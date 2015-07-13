@@ -78,9 +78,17 @@ def parseBUDetail(lenovoCode, content):
         print(len(buList))
 
 
-def parseProductsDetail(bu, productsContentBlock):
-    buProductsBlock = productsContentBlock.find_all('div', itemindex=bu.itemIndex)
-    productsTable = buProductsBlock[0].table
+def parseProductsDetail(bu, productsContentBlockList):
+    buProductsBlockList = []
+    for productsContentBlock in productsContentBlockList:
+        buProductsBlockList = productsContentBlock.find_all('div', itemindex=bu.itemIndex)
+        if len(buProductsBlockList) != 0:
+            break
+
+    if len(buProductsBlockList) == 0:
+        return None
+
+    productsTable = buProductsBlockList[0].table
     productRowList = productsTable.find_all('tr')
     if len(productRowList) > 0:
         products = []
