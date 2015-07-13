@@ -5,7 +5,7 @@ import re
 import logging
 from requests.exceptions import *
 from multiprocessing import Pool
-from vulelement import VulnerabilityElement
+from vulnerability import Vulnerability
 from businessunit import BusinessUnit
 from product import Product
 
@@ -40,7 +40,7 @@ def parseVulRow(tableRow):
     firstDate = clearSpecialChars(tdElems[1].string)
     lastDate = clearSpecialChars(tdElems[2].string)
 
-    ve = VulnerabilityElement(lenovoCode, description,
+    ve = Vulnerability(lenovoCode, description,
                               link, firstDate, lastDate)
     vulCollection[lenovoCode] = ve
 
@@ -53,29 +53,41 @@ def parseVulTable(vulTable):
         parseVulRow(items[index])
 
 
-def parseVulDetail(vul, content):
-    contentText = html2text.html2text(content.get_text())  # convert to pure text
-    startPos = contentText.find(severityFlag)
-    endPos = contentText.find(' ', startPos + len(severityFlag) + 1)
-    severity = contentText[startPos + len(severityFlag) + 1: endPos]
+def parseVulDetail(vul, entireVulContent):
+    pureTextOfContent = html2text.html2text(entireVulContent.get_text())  # convert to pure text
+    startPos = pureTextOfContent.find(severityFlag)
+    endPos = pureTextOfContent.find(' ', startPos + len(severityFlag) + 1)
+    severity = pureTextOfContent[startPos + len(severityFlag) + 1: endPos]
     vul.severity = severity
 
-    cveCodes = extractCVEcode(contentText)
+    cveCodes = extractCVEcode(pureTextOfContent)
     vul.cveCodes = repr(cveCodes)
     # print(vul.to_json())
 
-    parseBUDetail(vul.lenovoCode, content)
+    buList = parseBUDetail(entireVulContent)
+
+    # get the product list from each Business Unit
+    productsContentBlockList = entireVulContent.find_all('div', id='NewTileListContent')
+    for bu in buList:
+        products = parseProductsDetail(bu, productsContentBlockList)
+        buildRelationShipInVulBUProd(bu, products, vul.lenovoCode)
 
 
-def parseBUDetail(lenovoCode, content):
+def buildRelationShipInVulBUProd(bu, products, lenovoCode):
+    for product in products:
+        bu.addDevice(product.name)
+        product.lenovoCode = lenovoCode
+
+
+def parseBUDetail(content):
     buList = []
     buAndProdsElem = content.find_all(id='NewTileListComponent')
     if buAndProdsElem is not None and len(buAndProdsElem) > 0:
         for ulElem in buAndProdsElem[0].find_all('ul'):
             for liElem in ulElem.find_all('li'):
-                bu = BusinessUnit(liElem.get_text(), lenovoCode, liElem['itemindex'])
+                bu = BusinessUnit(liElem.get_text(), liElem['itemindex'])
                 buList.append(bu)
-        print(len(buList))
+    return buList
 
 
 def parseProductsDetail(bu, productsContentBlockList):
@@ -86,7 +98,7 @@ def parseProductsDetail(bu, productsContentBlockList):
             break
 
     if len(buProductsBlockList) == 0:
-        return None
+        return []
 
     productsTable = buProductsBlockList[0].table
     productRowList = productsTable.find_all('tr')
@@ -107,10 +119,12 @@ def parseProductsDetail(bu, productsContentBlockList):
                 pass
         return products
     else:
-        return None
+        return []
 
 def loadContentPage(url):
     print("loading " + url)
+
+    # try three times to avoid the timeout case
     for i in range(3):
         try:
             response = requests.get(url, timeout=30)
@@ -124,8 +138,8 @@ def loadContentPage(url):
 
 def processDetailPage(vul):
     try:
-        content = loadContentPage(vul.link)
-        parseVulDetail(vul, content)
+        entireVulContent = loadContentPage(vul.link)
+        parseVulDetail(vul, entireVulContent)
     except Exception:
         logging.exception("arg is %s" % vul.lenovoCode)
 

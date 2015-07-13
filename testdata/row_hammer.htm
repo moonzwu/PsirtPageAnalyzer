@@ -1,0 +1,2688 @@
+<!DOCTYPE html>
+<html itemscope="" lang="en-US">
+    <head>
+        <title>Row Hammer Privilege Escalation - Lenovo Support (US)</title>
+        
+        <meta itemprop="server-info" content="RDUWPESP008" />
+        <meta itemprop="version" content="13.9.0" />
+        <meta itemprop="page-id" content="549902a4-87bd-45ea-8f70-74fd6665e59b" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+            <meta name="description" content="" />
+                    <meta name="Title" content="Row Hammer Privilege Escalation" />
+            <meta name="Language" content="en_US" />
+            <meta name="Country" content="US" />
+            <meta name="PageStatus" content="Active" />
+            <meta name="Description" content="Row Hammer Privilege Escalation" />
+            <meta name="Lenovo.Country" content="US" />
+            <meta name="InternalSearchCanonical" content="http://support.lenovo.com/us/en/product_security/row_hammer" />
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                
+    
+            <script type="text/javascript" src="/dtagent61_jn_8154.js" data-dtconfig="rid=RID_99999227|rpid=-584440890|domain=lenovo.com|tp=500,50,0|reportUrl=dynaTraceMonitor"></script><link rel="canonical" href="http://support.lenovo.com/us/en/product_security/row_hammer" />
+        <!--[if lt IE 7]><html class="ie ie6 lte9 lte8 lte7" lang="en"><![endif]-->
+        <!--[if IE 7]><html class="ie ie7 lte9 lte8" lang="en"><![endif]-->
+        <!--[if IE 8]><html class="ie ie8 lte9" lang="en"><![endif]-->
+        <!--[if IE 9]><html class="ie ie9" lang="en"><![endif]-->
+        <!--[if gt IE 9]><html lang="en"><![endif]-->
+        <!--[if !IE]><html lang="en"><![endif]-->
+        <!--[if lt IE 9]>
+            <script type="text/javascript">
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('section');
+                document.createElement('footer');
+            </script>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+            <link rel="stylesheet" href="/app/themes/base/IE.css" type="text/css">
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script>
+        <![endif]-->
+        <link href="/bundles/themes/ESupport?v=ZzGq7hgQmK9uQ9_Rceh9UVdQtouWnrU50cIModZPfMs1" rel="stylesheet"/>
+
+        
+        
+            <script type="text/javascript"
+                    src="//assets.adobedtm.com/9f0b01d01b963414024fff848ca9d3750437e1fa/satelliteLib-049b1f0ec32513967b9eef550a7aa4db75461d8a.js">
+            
+            </script>
+            <script type="text/javascript">
+                var lmd = {"cc":"US","bu":"support","language":"en","section":"support","subsection":"/product_security/row_hammer","loginInfo":{"loginStatus":"logged out"}};
+            </script>
+    
+                  <script type="text/javascript">
+                    var AKSB=AKSB||{};AKSB.q=[];AKSB.mark=function(c,a){AKSB.q.push(["mark",c,a||(new Date).getTime()])};AKSB.measure=function(c,a,b){AKSB.q.push(["measure",c,a,b||(new Date).getTime()])};AKSB.done=function(c){AKSB.q.push(["done",c])};AKSB.mark("firstbyte",(new Date).getTime());
+                    AKSB.prof={custid:"256487",ustr:"",originlat:0,clientrtt:2,ghostip:"72.246.190.197",ipv6:false,pct:10,xhrtest:false,clientip:"106.185.34.139",requestid:"1eb63635",protocol:"",akM:"a",akN:"ae"};
+                    (function(c){var a=document.createElement("iframe");a.src="javascript:false";(a.frameElement||a).style.cssText="width: 0; height: 0; border: 0; display: none";var b=document.getElementsByTagName("script"),b=b[b.length-1];b.parentNode.insertBefore(a,b);a=a.contentWindow.document;b=String.fromCharCode;c=b(60)+"body onload=\"var js = document.createElement('script');js.id = 'aksb-ifr';js.src = '"+c+"';document.body.appendChild(js);\""+b(62);a.open().write(c);a.close()})(("https:"===document.location.protocol?
+                    "https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js");
+                  </script>
+                  </head>
+    <body class="hasCookie">
+        <header>
+<div class="website-width positionR">
+<div class="header-logo">
+<a href="/">
+<img width="440" height="65" src="/~/media/images/system/common/lenovo-for-those-who-do-logo.ashx" alt="lenovo" />
+</a></div>
+<a title="Print" href="javascript:window.print();" class="printIcon ft-print visible-desktop">Print </a>
+</div>
+<div class="reset"></div>
+</header>
+<div class="website-width visible-desktop over_page">
+<div class="overLinks"><a class="over_link">Support</a>
+<div class="overHideBox">
+<ul>
+    <li><a href="http://www.lenovo.com"><span style="color: #0070c0;">Shop</span></a></li>
+    <li><a href="http://www.lenovo.com/services"><span style="color: #0070c0;">Service</span></a></li>
+</ul>
+<br />
+<br />
+<strong><span style="text-decoration: underline;">Network Storage</span></strong>
+<ul>
+    <li><a href="http://www.lenovoemc.com/"><span style="color: #0070c0;">LenovoEMC</span></a></li>
+    <li><a href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen"><span style="color: #0070c0;">IBM</span></a></li>
+</ul>
+<br />
+<br />
+<strong><span style="text-decoration: underline;">Servers</span></strong>
+<ul>
+    <li><a href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen"><span style="color: #0070c0;">System x (IBM)</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+        
+
+<div id="country_switch" class="website-width visible-desktop over_page countrySwitchBox" data-jscomponent="CountrySwitch" data-selectedcountry="en-us">
+    <div class="overLinks">
+<form action="/services/us/en/countryswitch/getcountrylanguage?PageContext=Lenovo.ESupport.Business.Services.Context.PageContext&amp;CurrentUrl=%2Fproduct_security%2Frow_hammer" class="left-float" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="ChangeCountrySuccess()" data-ajax-update="#divCountryLanguages" id="GetCountryLanguagesForm" method="post">            <div id="countrySwitch" class="countrySwitch">
+                <cite class="hide"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</cite>
+                <ul>
+                        <li id ="RFS-Argentina"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Argentina" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_argentina.png" /></span>Argentina</a></li>
+                        <li id ="RFS-Australia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Australia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_australia.png" /></span>Australia</a></li>
+                        <li id ="RFS-Austria"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Austria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_austria.png" /></span>Austria</a></li>
+                        <li id ="RFS-Bangladesh"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bangladesh" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bangladesh.png" /></span>Bangladesh</a></li>
+                        <li id ="RFS-Belgium"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Belgium" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_belgium.png" /></span>Belgium</a></li>
+                        <li id ="RFS-Bolivia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bolivia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bolivia.png" /></span>Bolivia</a></li>
+                        <li id ="RFS-Brazil"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Brazil" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_brazil.png" /></span>Brazil</a></li>
+                        <li id ="RFS-Bulgaria"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bulgaria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bulgaria.png" /></span>Bulgaria</a></li>
+                        <li id ="RFS-Canada"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Canada" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_canada.png" /></span>Canada</a></li>
+                        <li id ="RFS-Chile"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Chile" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_chile.png" /></span>Chile</a></li>
+                        <li id ="RFS-Colombia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Colombia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_colombia.png" /></span>Colombia</a></li>
+                        <li id ="RFS-Croatia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Croatia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_croatia.png" /></span>Croatia</a></li>
+                        <li id ="RFS-Cyprus"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Cyprus" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_cyprus.png" /></span>Cyprus</a></li>
+                        <li id ="RFS-Czech Republic"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Czech Republic" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_czech_republic.png" /></span>Czech Republic</a></li>
+                        <li id ="RFS-Denmark"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Denmark" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_denmark.png" /></span>Denmark</a></li>
+                        <li id ="RFS-Ecuador"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ecuador" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_equador.png" /></span>Ecuador</a></li>
+                        <li id ="RFS-Egypt"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Egypt" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_egypt.png" /></span>Egypt</a></li>
+                        <li id ="RFS-Finland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Finland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_finland.png" /></span>Finland</a></li>
+                        <li id ="RFS-France"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/France" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_france.png" /></span>France</a></li>
+                        <li id ="RFS-Germany"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Germany" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_germany.png" /></span>Germany</a></li>
+                        <li id ="RFS-Greece"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Greece" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_greece.png" /></span>Greece</a></li>
+                        <li id ="RFS-Hong Kong"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hong Kong" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hong_kong.png" /></span>Hong Kong</a></li>
+                        <li id ="RFS-Hungary"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hungary" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hungary.png" /></span>Hungary</a></li>
+                        <li id ="RFS-India"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/India" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_india.png" /></span>India</a></li>
+                        <li id ="RFS-Indonesia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Indonesia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_indonesia.png" /></span>Indonesia</a></li>
+                        <li id ="RFS-Ireland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ireland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ireland.png" /></span>Ireland</a></li>
+                        <li id ="RFS-Israel"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Israel" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_israel.png" /></span>Israel</a></li>
+                        <li id ="RFS-Italy"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Italy" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_italy.png" /></span>Italy</a></li>
+                        <li id ="RFS-Japan"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Japan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_japan.png" /></span>Japan</a></li>
+                        <li id ="RFS-Korea"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Korea" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_korea.png" /></span>Korea</a></li>
+                        <li id ="RFS-Malaysia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Malaysia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_malaysia.png" /></span>Malaysia</a></li>
+                        <li id ="RFS-Mexico"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mexico" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mexico.png" /></span>Mexico</a></li>
+                        <li id ="RFS-Mongolia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mongolia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mongolia.png" /></span>Mongolia</a></li>
+                        <li id ="RFS-Morocco"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Morocco" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_morocco.png" /></span>Morocco</a></li>
+                        <li id ="RFS-Netherlands"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Netherlands" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_netherlands.png" /></span>Netherlands</a></li>
+                        <li id ="RFS-New Zealand"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/New Zealand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_new_zealand.png" /></span>New Zealand</a></li>
+                        <li id ="RFS-Nigeria"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Nigeria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_nigeria.png" /></span>Nigeria</a></li>
+                        <li id ="RFS-Norway"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Norway" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_norway.png" /></span>Norway</a></li>
+                        <li id ="RFS-Paraguay"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Paraguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_paraquay.png" /></span>Paraguay</a></li>
+                        <li id ="RFS-Peru"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Peru" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_peru.png" /></span>Peru</a></li>
+                        <li id ="RFS-Philippines"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Philippines" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_philippines.png" /></span>Philippines</a></li>
+                        <li id ="RFS-Poland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Poland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_poland.png" /></span>Poland</a></li>
+                        <li id ="RFS-Portugal"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Portugal" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_portugal.png" /></span>Portugal</a></li>
+                        <li id ="RFS-Romania"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Romania" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_romania.png" /></span>Romania</a></li>
+                        <li id ="RFS-Russia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Russia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_russia.png" /></span>Russia</a></li>
+                        <li id ="RFS-Saudi Arabia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Saudi Arabia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_saudi_arabia.png" /></span>Saudi Arabia</a></li>
+                        <li id ="RFS-Serbia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Serbia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_serbia_montenegro.png" /></span>Serbia</a></li>
+                        <li id ="RFS-Singapore"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Singapore" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_singapore.png" /></span>Singapore</a></li>
+                        <li id ="RFS-Slovakia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovakia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovakia.png" /></span>Slovakia</a></li>
+                        <li id ="RFS-Slovenia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovenia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovenia.png" /></span>Slovenia</a></li>
+                        <li id ="RFS-South Africa"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/South Africa" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_africa.png" /></span>South Africa</a></li>
+                        <li id ="RFS-Spain"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Spain" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_spain.png" /></span>Spain</a></li>
+                        <li id ="RFS-Sri Lanka"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sri Lanka" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sri_lanka.png" /></span>Sri Lanka</a></li>
+                        <li id ="RFS-Sweden"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sweden" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sweden.png" /></span>Sweden</a></li>
+                        <li id ="RFS-Switzerland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Switzerland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_switzerland.png" /></span>Switzerland</a></li>
+                        <li id ="RFS-Taiwan"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Taiwan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_taiwan.png" /></span>Taiwan</a></li>
+                        <li id ="RFS-Thailand"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Thailand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_thailand.png" /></span>Thailand</a></li>
+                        <li id ="RFS-Turkey"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Turkey" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_turkey.png" /></span>Turkey</a></li>
+                        <li id ="RFS-Ukraine"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ukraine" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ukraine.png" /></span>Ukraine</a></li>
+                        <li id ="RFS-United Arab Emirates"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Arab Emirates" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_united_arab_emirates.png" /></span>United Arab Emirates</a></li>
+                        <li id ="RFS-United Kingdom"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Kingdom" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_great_britain.png" /></span>United Kingdom</a></li>
+                        <li id ="RFS-United States"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United States" class="selected"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</a></li>
+                        <li id ="RFS-Uruguay"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Uruguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_uruquay.png" /></span>Uruguay</a></li>
+                        <li id ="RFS-US Downloads"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/US Downloads" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>US Downloads</a></li>
+                        <li id ="RFS-Venezuela"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Venezuela" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_venezuela.png" /></span>Venezuela</a></li>
+                        <li id ="RFS-Vietnam"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Vietnam" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_vietnam.png" /></span>Vietnam</a></li>
+                </ul>
+            </div>
+            <input name="" type="hidden" value="" id="inputselectCountry" />
+            <input name="" type="hidden" value="#Please select Language#" id="SelectedLanguageTranslation" />
+<input id="SelectCountryPath" name="SelectCountryPath" type="hidden" value="" /></form>        <div id="divCountryLanguages" class="left-float">
+            <div id="languageSwitch" class="countrySwitch languageSwitch">
+    <cite class="hide" id="citeSelectLanguage">English</cite>
+    <ul>
+            <li id="RFS-English"><a href="/us/en/product_security/row_hammer" class="selected">English</a></li>
+    </ul>
+</div>
+<input name="" type="hidden" value="" id="inputselectLanguage" />
+        </div>
+    </div>
+</div>
+
+
+        
+
+<div class="website-width visible-desktop over_page servicer-login-box" style="display: none;">
+        <div class="servicer-login visible-desktop">
+            <a class="servicer-button" href="/us/en/servicerlogin?ReturnPage=http://support.lenovo.com/us/en/product_security/row_hammer" data-type="ServiceLoginUrlReplace">
+                Servicer Login
+            </a>
+        </div>
+    </div>
+
+    <div class="header-nav hide-desktop account-icon-location">
+        <a data-type="LinkUrlReplace" href="/services/us/en/accountlogin/lenovoidlogin?backUrl=http%3A%2F%2Fsupport.lenovo.com%2Fus%2Fen%2Fproduct_security%2Frow_hammer" class="header-nav-icon account-icon">#Account Title#</a>
+    </div>
+
+<div id="account_content" class="website-width visible-desktop over_page loginLinks account-login-box" checkloginurl="/services/us/en/accountlogin/islogin">
+    
+<div data-jscomponent="AccountLogin">
+
+        <div id="account-login" data-jscomponent="AccountLogin">
+            <div class="overLinks">
+                <a data-type="LinkUrlReplace" id="accountlogin" href="/services/us/en/accountlogin/lenovoidlogin?backUrl=http%3A%2F%2Fsupport.lenovo.com%2Fus%2Fen%2Fproduct_security%2Frow_hammer">Login</a>
+                <span class="line">|</span>
+                <a data-type="LinkUrlReplace" id="accountsignup" href="/services/us/en/accountlogin/lenovoidsignup?backUrl=http%3A%2F%2Fsupport.lenovo.com%2Fus%2Fen%2Fproduct_security%2Frow_hammer">Create Account</a>
+            </div>
+            <div id="ForgotPasswordView"></div>
+        </div>
+
+    <div id="link-accounts">
+    </div>
+</div>
+</div>
+
+
+        <div class="website-width header-search visible-desktop" data-jscomponent="MenuBar">
+    <ul class="header-subnav">
+                        <li><a href="/us/en" target="">Home</a></li>
+                    <li id="RFS-Get Started;">
+                        <a href="#" onclick=" testMenu() ">Get Started</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<div class="subnav-list-title">Tell me about my product</div>
+<ul>
+    <li><a href="/us/en/products/?tabName=Manuals">Manuals</a></li>
+    <li><a href="/us/en/products/?tabName=ProductParts">Specifications</a> </li>
+    <li><a href="/us/en/products/?tabName=Accessories">Accessories</a> </li>
+</ul>
+<div class="subnav-list-title">How to use </div>
+<ul>
+    <li><a href="/us/en/products/?tabName=Solutions">How To's</a>&nbsp;</li>
+    <li><a href="/us/en/products/?tabName=Video">Videos</a>&nbsp;</li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">Help me fix </div>
+<ul>
+    <li><a href="/us/en/products/?tabName=Solutions">Troubleshoot Solutions</a> </li>
+    <li><a href="/us/en/documents/ht004976">Diagnostics</a> </li>
+    <li><a href="/us/en/windows-support">Windows Support</a> </li>
+    <li><a href="http://forums.lenovo.com" target="_blank">Forums</a> </li>
+</ul>
+<div class="subnav-list-title">Get Software And Drivers </div>
+<ul>
+    <li><a href="/us/en/documents/ht080136">System Update</a> </li>
+    <li><a href="/us/en/products/?tabName=Downloads">Downloads by product</a></li>
+    <li><a href="/us/en/lenovodiagnosticsolutions">Lenovo Solutions Center</a> </li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">Repair and Service </div>
+<ul>
+    <li><a href="/us/en/depotstatus">Check Repair Status</a> </li>
+    <li><a href="/us/en/service-provider">Find a local authorized service provider</a> </li>
+</ul>
+<div class="subnav-list-title">Find Parts </div>
+<ul>
+    <li><a href="/us/en/products/?tabName=ProductParts">Product Parts Detail</a></li>
+    <li><a href="/us/en/partslookup">Parts Lookup</a></li>
+</ul>
+</div>
+
+
+                                    <div class="subNavColumn">
+<div style="display: inline-block; width: 100%; margin-top: 5px; cursor: pointer;">
+<a href="/us/en/documents/ht077986"><img style="max-width: 100%;" alt="assistedsearch" src="/~/media/images/banners/menubanners/assistedsearch.ashx?la=en" /></a>
+</div><div style="width: 100%; padding-top: 10px; display: inline-block; cursor: pointer;" onclick="window.open('http://ovp.lenovo.com/lenovo-ovp/public/showDetail!publicStatusIndex.action','_blank');">
+<img style="max-width: 100%;" alt="checkprodorder" src="/~/media/images/banners/menubanners/checkprdorder_en.ashx?la=en" />
+</div>                                    </div>
+                            </div>
+                    </li>
+                    <li id="RFS-Product Support;">
+                        <a href="#" onclick=" testMenu() ">Product Support</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<ul>
+    <li><a href="/us/en/products/?type=Desktops-and-all-in-ones&amp;c=1">Desktops &amp; All-in-Ones</a></li>
+    <li><a href="/us/en/documents/pd014572/?type=Desktops-and-all-in-ones&amp;c=1">Docking Stations</a></li>
+    <li><a href="/us/en/products/?type=Laptops-and-netbooks&amp;c=1">Laptops</a></li>
+    <li><a href="/us/en/products/?type=Monitors-and-projectors&amp;c=1">Monitors &amp; Projectors</a></li>
+    <li><a target="blank" href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen">Network Storage - IBM</a> </li>
+    <li><a target="blank" href="http://support.lenovoemc.com">Network Storage - LenovoEMC</a> </li>
+    <li><a href="/us/en/products/?type=Servers&amp;c=1">Servers - Lenovo</a></li>
+    <li><a target="blank" href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen">Servers - System x (IBM)</a></li>
+    <li><a href="/us/en/products/?type=Phones&amp;c=1">Smartphones</a></li>
+    <li><a href="/us/en/products/?type=Tablets&amp;c=1">Tablets</a></li>
+    <li><a href="/us/en/documents/acc100199">ThinkPad Stack</a></li>
+    <li><a href="/us/en/products/?type=Workstations&amp;c=1">Workstations</a></li>
+    <li><a href="https://download.lenovo.com/eol/index.html" target="_blank">End-of-life Products (Archive)</a></li>
+</ul>
+</div>
+
+
+                            </div>
+                    </li>
+                    <li id="RFS-Enterprise Support;">
+                        <a href="#" onclick=" testMenu() ">Enterprise Support</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<div class="subnav-list-title">
+Downloads
+</div>
+<ul>
+    <li>ThinkVantage
+    <ul>
+        <li><a href="/us/en/documents/ht037696">Software</a></li>
+        <li><a href="/us/en/documents/ht037099">Admin Tools</a></li>
+        <li><a href="/us/en/documents/ht037099#ur">Update Retriever</a></li>
+        <li><a href="/us/en/documents/ht037099#ti">Thin Installer</a></li>
+    </ul>
+    </li>
+    <li><a href="/us/en/documents/ht074984">SCCM Driver Packs</a></li>
+    <li><a href="/us/en/lenovodiagnosticsolutions">Lenovo Solution Center Diagnostics</a></li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">
+Windows Support Center
+</div>
+<ul>
+    <li><a href="/us/en/documents/ht100092">Windows 8.1 Tested System List</a></li>
+    <li><a href="http://windows.microsoft.com/en-us/windows-8/update-from-windows-8-tutorial" target="_blank">Windows 8 Upgrade</a></li>
+</ul>
+<div class="subnav-list-title">
+Other
+</div>
+<ul>
+    <li><a href="/us/en/depotstatus">Check Repair status</a></li>
+    <li><a href="http://www.lenovoquickpick.com/" target="_blank">Options Configurator - Quick Pick</a> </li>
+    <li><a href="http://www.lenovo.com/training" target="_blank">Training</a></li>
+    <li><a href="/us/en/product_security">Product Security Advisories</a> </li>
+    <li><a href="http://forums.lenovo.com/t5/Enterprise-Management-Board/bd-p/sa01_eg" target="_blank">Enterprise Management Forum</a> </li>
+    <li><a href="/us/en/documents/ht100937">Top Priority Tips for ThinkServer RD550, RD650, TD350</a></li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">
+Reference Documents
+</div>
+<ul>
+    <li><a href="/us/en/documents/pd100192">FRU Part Lists</a></li>
+    <li><a href="/us/en/products/?tabName=Manuals">User Guides</a></li>
+    <li><a href="http://www.lenovo.com/psref/" target="_blank">PSREF - Technical Specifications</a></li>
+    <li><a href="/us/en/documents/um006391">Options Compatibility Matrix (for Accessories)</a></li>
+</ul>
+<div class="subnav-list-title">
+Downgrade Kits
+</div>
+<ul>
+    <li><a href="/us/en/documents/ht101582">Windows Server 2012</a></li>
+</ul>
+</div>
+
+
+                                    <div class="subNavColumn">
+<div style="width: 100%; padding-top: 10px; display: inline-block; cursor: pointer;" onclick="window.open('/warrantylookup', '_self')">
+<img style="max-width: 100%;" alt="checkprodorder" src="/~/media/images/banners/menubanners/checkwarranty_en.ashx?la=en" />
+</div>                                    </div>
+                            </div>
+                    </li>
+                    <li id="RFS-Warranty;">
+                        <a href="#" onclick=" testMenu() ">Warranty</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<ul>
+    <li><a href="/us/en/warrantylookup">Check Warranty Status</a></li>
+    <li><a href="/us/en/contactus/upgradewarranty">Extend/Upgrade Warranty</a></li>
+    <li><a href="/us/en/contactus/basewarrantyregistration">Base Warranty Registration</a></li>
+    <li><a href="/us/en/contactus/warrantyupgraderegistration">Warranty Upgrade Registration</a></li>
+    <li><a href="/us/en/iwslookupthink">International Warranty Services</a></li>
+    <li><a href="/us/en/documents/ht101049">Accidental Damage Protection Services Agreement</a></li>
+    <li><a href="/us/en/documents/ht101058">Warranty Services Agreement</a></li>
+    <li><a href="/us/en/warrantylookup/warrantypolicy_pc">Warranty Policies</a></li>
+</ul>
+</div>
+
+
+                                    <div class="subNavColumn">
+<a href="/us/en/documents/ht002608 " style="text-decoration: none;">
+<div style="display: inline-block; position: relative; width: 130px; float: left; border: 2px solid #3e8ddd !important; bottom: 0px !important;">
+<div>
+<img alt="" src="/~/media/images/2015/alert.ashx?la=en&amp;h=30&amp;w=30" style="height: 30px; width: 30px; position: relative; float: left; padding-top: 2px; padding-left: 2px; padding-bottom: 2px;" />
+</div>
+<div style="position: relative; float: left; margin: 0px auto; vertical-align: middle; padding-top: 8px; padding-left: 15px;">Recall Page</div>
+</div>
+</a>                                    </div>
+                            </div>
+                    </li>
+                        <li><a href="http://www.lenovo.com/services" target="_blank">Services</a></li>
+                        <li><a href="/us/en/globalproductselector?returnurl=ForContactUs" target="">Contact Us</a></li>
+    </ul>
+</div>
+
+        
+        <!-- AddThis Button BEGIN -->
+        <div id="SocialShare" data-jscomponent="SocialShare" class="addthis_toolbox addthis_default_style website-width visible-desktop" addthis:url="www.lenovo.com">
+            <a class="addthis_button_compact"></a>
+        </div>
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact:'' 
+    };
+</script> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-531e6ee80c6ae512"></script>
+<!-- AddThis Button END -->
+
+
+<div data-jscomponent="SiteSearchBox">
+    <div class="header-nav hide-desktop search-icon-location">
+        <a class="header-nav-icon search-icon">Search</a>
+    </div>
+
+    <div class=" hide-desktop">
+        <div class="website-width header-search">
+<form action="/services/us/en/sitesearchbox/searchbox" method="post"><input id="SiteLanguage" name="SiteLanguage" type="hidden" value="en-US" /><input data-val="true" data-val-regex="The field &#39;#SiteSearchKey#&#39; must match the regular expression &#39;[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*&#39;." data-val-regex-pattern="[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*" data-val-required="The &#39;#SiteSearchKey#&#39; field is required." id="SiteSearchKey" name="SiteSearchKey" placeholder="Search Key Word" type="text" value="" /></form>            <a class="searchFormButton"></a>
+            <div class="reset"></div>
+        </div>
+    </div>
+
+    <div class="website-width header-search visible-desktop">
+        <div class="header-search-desktop">
+<form action="/services/us/en/sitesearchbox/searchbox" method="post"><input id="SiteLanguage" name="SiteLanguage" type="hidden" value="en-US" /><input data-val="true" data-val-regex="The field &#39;#SiteSearchKey#&#39; must match the regular expression &#39;[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*&#39;." data-val-regex-pattern="[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*" data-val-required="The &#39;#SiteSearchKey#&#39; field is required." id="SiteSearchKey" name="SiteSearchKey" placeholder="Search Key Word" type="text" value="" /></form>            <a class="searchFormButton"></a>
+        </div>
+    </div>
+</div>
+
+        
+
+
+<span style="display: none" id="opinionIcoText">Click here to rate this page</span>
+        
+
+<div class="mobile-nav"></div>
+<div class="mobile-nav-wrapper" data-jscomponent="NavigationBar" data-selectedcountry="en-us">
+    <div class="mobile-nav-close"></div>
+    <div class="reset"></div>
+    <div class="mobile-nav-items-wrapper">
+        <ul class="mobile-nav-items">
+            <li class="nav-lang">
+                <span class="nav-ico-lang"></span>
+<form action="/services/us/en/navigationbar/getcountrylanguage?PageContext=Lenovo.ESupport.Business.Services.Context.PageContext&amp;CurrentUrl=%2Fproduct_security%2Frow_hammer" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="ChangeNavCountrySuccess()" data-ajax-update="#divNavCountryLanguages" id="NavGetCountryLanguagesForm" method="post">                    <div id="mobileCountrySwitch" class="mobileCountrySwitch">
+                        <cite class="hide"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</cite>
+                        <ul>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Argentina" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_argentina.png" /></span>Argentina</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Australia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_australia.png" /></span>Australia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Austria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_austria.png" /></span>Austria</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bangladesh" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bangladesh.png" /></span>Bangladesh</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Belgium" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_belgium.png" /></span>Belgium</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bolivia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bolivia.png" /></span>Bolivia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Brazil" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_brazil.png" /></span>Brazil</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bulgaria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bulgaria.png" /></span>Bulgaria</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Canada" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_canada.png" /></span>Canada</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Chile" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_chile.png" /></span>Chile</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Colombia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_colombia.png" /></span>Colombia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Croatia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_croatia.png" /></span>Croatia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Cyprus" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_cyprus.png" /></span>Cyprus</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Czech Republic" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_czech_republic.png" /></span>Czech Republic</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Denmark" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_denmark.png" /></span>Denmark</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ecuador" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_equador.png" /></span>Ecuador</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Egypt" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_egypt.png" /></span>Egypt</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Finland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_finland.png" /></span>Finland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/France" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_france.png" /></span>France</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Germany" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_germany.png" /></span>Germany</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Greece" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_greece.png" /></span>Greece</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hong Kong" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hong_kong.png" /></span>Hong Kong</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hungary" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hungary.png" /></span>Hungary</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/India" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_india.png" /></span>India</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Indonesia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_indonesia.png" /></span>Indonesia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ireland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ireland.png" /></span>Ireland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Israel" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_israel.png" /></span>Israel</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Italy" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_italy.png" /></span>Italy</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Japan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_japan.png" /></span>Japan</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Korea" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_korea.png" /></span>Korea</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Malaysia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_malaysia.png" /></span>Malaysia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mexico" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mexico.png" /></span>Mexico</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mongolia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mongolia.png" /></span>Mongolia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Morocco" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_morocco.png" /></span>Morocco</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Netherlands" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_netherlands.png" /></span>Netherlands</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/New Zealand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_new_zealand.png" /></span>New Zealand</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Nigeria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_nigeria.png" /></span>Nigeria</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Norway" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_norway.png" /></span>Norway</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Paraguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_paraquay.png" /></span>Paraguay</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Peru" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_peru.png" /></span>Peru</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Philippines" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_philippines.png" /></span>Philippines</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Poland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_poland.png" /></span>Poland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Portugal" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_portugal.png" /></span>Portugal</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Romania" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_romania.png" /></span>Romania</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Russia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_russia.png" /></span>Russia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Saudi Arabia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_saudi_arabia.png" /></span>Saudi Arabia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Serbia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_serbia_montenegro.png" /></span>Serbia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Singapore" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_singapore.png" /></span>Singapore</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovakia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovakia.png" /></span>Slovakia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovenia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovenia.png" /></span>Slovenia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/South Africa" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_africa.png" /></span>South Africa</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Spain" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_spain.png" /></span>Spain</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sri Lanka" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sri_lanka.png" /></span>Sri Lanka</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sweden" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sweden.png" /></span>Sweden</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Switzerland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_switzerland.png" /></span>Switzerland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Taiwan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_taiwan.png" /></span>Taiwan</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Thailand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_thailand.png" /></span>Thailand</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Turkey" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_turkey.png" /></span>Turkey</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ukraine" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ukraine.png" /></span>Ukraine</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Arab Emirates" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_united_arab_emirates.png" /></span>United Arab Emirates</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Kingdom" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_great_britain.png" /></span>United Kingdom</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United States" class="selected"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Uruguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_uruquay.png" /></span>Uruguay</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/US Downloads" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>US Downloads</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Venezuela" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_venezuela.png" /></span>Venezuela</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Vietnam" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_vietnam.png" /></span>Vietnam</a></li>
+                        </ul>
+                    </div>
+    <input name="" type="hidden" value="" id="inputMobileCountry" />
+<input id="SelectNavCountryPath" name="SelectNavCountryPath" type="hidden" value="" />    <input name="" type="hidden" value="#Please select Language#" id="SelectedLanguageTranslation" />
+</form>                <div id="divNavCountryLanguages">
+                    <div id="mobileLanguageSwitch" class="mobileCountrySwitch mobileLanguageSwitch">
+    <cite class="hide" id="citeSelectLanguage">English</cite>
+    <ul>
+            <li><a href="/us/en/product_security/row_hammer" class="selected">English</a></li>
+    </ul>
+</div>
+<input name="" type="hidden" value="" id="inputMobileLanguage" />
+                </div>
+            </li>
+            
+
+
+                        <li>
+                            <a href="http://mobilesupport.lenovo.com">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_home.ashx' class='nav_ico' alt='Home' height='34' width='34' />
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/getstarted">
+                                <img src='/~/media/images/system/icon/navigation%20bar/getstarted.ashx' class='nav_ico' alt='getstarted' height='34' width='34' />
+                                Get Started
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/products">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_card.ashx' class='nav_ico' alt='prodsupport' height='34' width='34' />
+                                Product Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:window.open(&quot;/Products/?tabName=Downloads&quot;,&quot;_self&quot;)">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_download.ashx' class='nav_ico' alt='downloads' height='34' width='34' />
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:window.open(&quot;/Products/?tabName=Manuals&quot;,&quot;_self&quot;)">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_manuals.ashx' class='nav_ico' alt='manuals' height='34' width='34' />
+                                Manuals
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/find-solution">
+                                <img src='/~/media/images/system/icon/navigation%20bar/ico_contact.ashx' class='nav_ico' alt='solutions' height='36' width='36' />
+                                Find Solutions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:window.open(&quot;/Products/?tabName=Video&quot;,&quot;_self&quot;)">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_video.ashx' class='nav_ico' alt='videos' height='34' width='34' />
+                                Video Tutorials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.lenovo.com">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_bag.ashx' class='nav_ico' alt='Lenovo Shop' height='34' width='34' />
+                                Lenovo Shop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/enterprisesupport">
+                                <img src='/~/media/images/system/icon/navigation%20bar/enterprise.ashx' class='nav_ico' alt='enterprise' height='34' width='34' />
+                                Enterprise Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/warrantylookup">
+                                <img src='/~/media/images/system/icon/navigation%20bar/ico_warranty.ashx' class='nav_ico' alt='warranty' height='36' width='36' />
+                                Warranty Lookup
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.lenovo.com/services">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_services.ashx' class='nav_ico' alt='services' height='34' width='34' />
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/contactus">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_community.ashx' class='nav_ico' alt='contactus' height='34' width='34' />
+                                Contact Us
+                            </a>
+                        </li>
+            <li>
+ 
+                <a href="#" data-type="ServicerLoginUrl">
+                    <img src="/~/media/images/system/icon/navigation bar/iconav_login.ashx" class="nav_ico" alt="Services" height="34" width="34">
+                    Servicer Login
+                </a> 
+            </li>
+        </ul>
+    </div>
+</div>
+
+        <div class="website-width website-body">
+
+            
+
+
+
+
+            
+<div class="small-header">
+    <div class="small-header-wrapper">
+            <!--bread-crumb to do  -->
+                <div class="bread-crumb">
+                    <a href="/us/en">Official Lenovo Support Home</a>
+            &gt;
+                    <a href="/us/en/product_security">Lenovo Product Security Advisories</a>
+            &gt;
+Row Hammer Privilege Escalation    </div>
+    <div class="reset"></div>
+
+        <div class="reset"></div>
+        <h2 class="small-header-title hide-phone">Row Hammer Privilege Escalation</h2>
+    </div>
+</div>
+<div class="content-wrapper">
+    
+<div data-jscomponent="RichText">
+                <p><strong>Lenovo Security Advisory:</strong> &nbsp;LEN-2015-009<br />
+<strong>Potential Impact:</strong> &nbsp;Escalation of Privilege<br />
+<strong><a href="/us/en/documents/ht100758">Severity</a>:</strong>&nbsp;Medium</p>
+<p><strong>Summary:</strong><br />
+<br />
+The Passgate issue (aka &ldquo;Row Hammer&rdquo;) is an inherent design/process limitation in memory for sub 40nm technology such as DDR3/DDR3L/LPDDR2/LPDDR3/GDDR5 that can cause errors in rows of memory adjacent to rows that are being repeatedly accessed (&ldquo;hammered&rdquo;). This is a pervasive industry memory issue. &nbsp;It potentially affects multiple brands of PCs using the memory listed above, and is not unique to Lenovo products.<br />
+<br />
+Any sub 40nm (e.g. DDR3) memory made after 2011 and before 2014 may be impacted by this issue. <span style="text-decoration: underline;">ECC and non-DDR3 derived memory have not been proven to be impacted by this issue</span>. &nbsp;Memory isolation is a key property of reliable and secure systems. &nbsp;Systems and applications accessing one memory address should not have unintended side effects on data stored in another address belonging to other application(s). Row Hammering is not a new phenomenon and has historically been recognized as leading to random data corruption. &nbsp;However, recent security research has demonstrated that Row Hammering non-ECC DDR3-derived memory commonly used in desktops, workstations, and laptops can expose exploitable security vulnerability. This attack requires that an attacker already have logical access to the target computer and then use this code to escalate privileges.<br />
+<br />
+The problem occurs when the memory controller under command of malicious software causes an ACTIVATE command to a single row address repetitively. If the physically adjacent rows have not been ACTIVATED or refreshed recently, the charge from the over ACTIVATED row leaks into the dormant adjacent rows and causes a bit to flip. This failure mechanism has been coined &lsquo;Row Hammer&rsquo; as a row of memory cells are being &lsquo;hammered&rsquo; with ACTIVATE commands. Once this failure occurs, a Refresh command from the Memory Controller solidifies the error into the memory cell. Current understanding is that the charge leakage does not damage the physical memory cell. &nbsp;The security implication of this attack is that a program can corrupt memory pages belonging to another program.<br />
+<br />
+<strong>Mitigation Strategy for Customers (what you should do to protect yourself):</strong><br />
+<br />
+Lenovo is working with our memory suppliers in order to ensure that all new DRAM is designed to be Row Hammer-free.<br />
+<br />
+For computers with affected DDR3-derived memory, doubling the refresh rate on the memory has been shown to be effective in reducing the risk of successfully exploiting this issue. &nbsp;Memory refresh rate is controlled by the system BIOS. &nbsp;Refer to the <span style="text-decoration: underline;">Product Impact</span> section to determine if your product may be affected. &nbsp; When the updated BIOS is available for you to download, you will be able to link directly to the download page for the applicable product tab.</p>
+</div>
+
+    <div class="inc-accessServices" data-jscomponent="NewTileList" id="NewTileListComponent">
+            <div class="fluid-row">
+                <div class="cell12">
+                        <div class="header-label" style="left: 10px;">Affected Products:</div>
+
+                </div>
+            </div>
+                    <div>
+                <ul class="fluid-row accessOptions-tabs resp-tabs-list">
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_0">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">ThinkPad</div>
+</div>
+</div>
+        </li>
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_1">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">ThinkCentre</div>
+</div>
+</div>
+        </li>
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_2">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">ThinkStation</div>
+</div>
+</div>
+        </li>
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_3">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">ThinkServer &amp; Storage</div>
+</div>
+</div>
+        </li>
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_4">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">Lenovo EMC<br />
+</div>
+</div>
+</div>
+        </li>
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_5">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">Lenovo Notebook</div>
+</div>
+</div>
+        </li>
+                </ul>
+                <!-- Tab Content #1 -->
+                <div class="resp-tabs-container accessServices-tabs-container" id="NewTileListContent">
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_0">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td>ThinkPad E450    (Broadwell)</td>
+            <td>Affected</td>
+            <td>J5ET44WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e450/downloads/DS101972">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e450/downloads/DS101972</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad E450    (Sharkbay)</td>
+            <td>Affected</td>
+            <td>J5ET44WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e450/downloads/DS101972">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e450/downloads/DS101972</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad E550    (Broadwell)</td>
+            <td>Affected</td>
+            <td style="width: 136px;">J5ET44WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e550/downloads/DS101972">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e550/downloads/DS101972</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad E550    (Sharkbay)</td>
+            <td>Affected</td>
+            <td style="width: 136px;">J5ET44WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e550/downloads/DS101972">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e550/downloads/DS101972</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E130</td>
+            <td>Affected</td>
+            <td style="width: 136px;">&nbsp;</td>
+            <td style="width: 454px;">Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E135</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E145</td>
+            <td>Affected</td>
+            <td>HSET61WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e145/downloads/DS036720">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e145/downloads/DS036720</a></td>
+        </tr>
+        <tr>
+            <td>Thinkpad Edge    E330</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E335</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>Thinkpad Edge    E430</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E431/E531</td>
+            <td>Affected</td>
+            <td>HEET48WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e431/downloads/DS035124">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e431/downloads/DS035124</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E435</td>
+            <td>Affected</td>
+            <td style="width: 136px;">&nbsp;</td>
+            <td style="width: 454px;">Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E440/E540</td>
+            <td>Affected</td>
+            <td>J9ET98WW&nbsp;&nbsp;</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e440/downloads/DS037207">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e440/downloads/DS037207</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E445</td>
+            <td>Affected</td>
+            <td>HRET24WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e445/downloads/DS035512">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e445/downloads/DS035512</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E455/E555</td>
+            <td>Affected</td>
+            <td>HTET43WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e455/downloads/DS100990">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e455/downloads/DS100990</a></td>
+        </tr>
+        <tr>
+            <td>Thinkpad Edge    E530</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E535</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Edge    E545</td>
+            <td>Affected</td>
+            <td>HRET24WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e545/downloads/DS035512">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-edge-e545/downloads/DS035512</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Helix    (20CG, 20CH)</td>
+            <td>Affected</td>
+            <td>N17ET74W</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-helix-series-laptops/thinkpad-helix-type-20cg-20ch/downloads/DS101505">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-helix-series-laptops/thinkpad-helix-type-20cg-20ch/downloads/DS101505</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Helix    (3xxx)</td>
+            <td>Affected</td>
+            <td>GFET52WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-helix-series-laptops/thinkpad-helix-type-3xxx/downloads/DS034627">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-helix-series-laptops/thinkpad-helix-type-3xxx/downloads/DS034627</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad L330</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad    L430/L530</td>
+            <td>Affected</td>
+            <td>G3ETA4WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l430/downloads/DS029125">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l430/downloads/DS029125</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad    L440/L540</td>
+            <td>Affected</td>
+            <td>J4ET76WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l440/downloads/DS037206">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l440/downloads/DS037206</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad L450    (Broadwell)</td>
+            <td>Affected</td>
+            <td>JDET49WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l450/downloads/DS102107">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l450/downloads/DS102107</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad L450    (Sharkbay)</td>
+            <td>Affected</td>
+            <td>JDET49WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l450/downloads/DS102107">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l450/downloads/DS102107</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad S1    Yoga (Non-vPro)</td>
+            <td>Affected</td>
+            <td>GQET44WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga/downloads/DS038334">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga/downloads/DS038334</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad S1    Yoga (vPro)</td>
+            <td>Affected</td>
+            <td>B0ET28WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga/downloads/DS038334">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga/downloads/DS038334</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad S430</td>
+            <td>Affected</td>
+            <td>GAETA0WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-s-series-laptops/thinkpad-s430/downloads/DS029726">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-s-series-laptops/thinkpad-s430/downloads/DS029726</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad S431</td>
+            <td>Affected</td>
+            <td style="width: 136px;">&nbsp;</td>
+            <td style="width: 454px;">Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad S440</td>
+            <td>Affected</td>
+            <td style="width: 136px;">&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad S531</td>
+            <td>Affected</td>
+            <td>GKET35WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-s-series-laptops/thinkpad-s531/downloads/DS035584">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-s-series-laptops/thinkpad-s531/downloads/DS035584</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad S540</td>
+            <td>Affected</td>
+            <td>GPET64WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-s-series-laptops/thinkpad-s540/downloads/DS038373">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-s-series-laptops/thinkpad-s540/downloads/DS038373</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T430,    T430i</td>
+            <td>Affected</td>
+            <td>G1ETA8WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t430/downloads/DS029252">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t430/downloads/DS029252</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T430s, T430si</td>
+            <td>Affected</td>
+            <td>G7ETA3WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t430s/downloads/DS029724">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t430s/downloads/DS029724</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T430u</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad T431s</td>
+            <td>Affected</td>
+            <td>GHET31WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t431s/downloads/DS034505">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t431s/downloads/DS034505</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad    T440/T440s</td>
+            <td>Affected</td>
+            <td>GJET83WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t440/downloads/DS035965">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t440/downloads/DS035965</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T440p</td>
+            <td>Affected</td>
+            <td>GLET78WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t440p/downloads/DS037575">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t440p/downloads/DS037575</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T450    (Broadwell)</td>
+            <td>Affected</td>
+            <td>JBET47WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t450/downloads/DS102109">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t450/downloads/DS102109</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T450    (Shark Bay)</td>
+            <td>Affected</td>
+            <td>JBET47WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t450/downloads/DS102109">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t450/downloads/DS102109</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T450s</td>
+            <td>Affected</td>
+            <td>JBET47WW<br />
+            <br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t450s/downloads/DS102109">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t450s/downloads/DS102109</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T530,    T530i</td>
+            <td>Affected</td>
+            <td>G4ETA4WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t530/downloads/DS029246">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t530/downloads/DS029246</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T540p</td>
+            <td>Affected</td>
+            <td>GMET70WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t540p/downloads/DS038147">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t540p/downloads/DS038147</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad T550</td>
+            <td>Affected</td>
+            <td>N11ET31W</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t550/downloads/DS102339">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t550/downloads/DS102339</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad    Tablet 10 (32-bit)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td>ThinkPad    Tablet 10 (64-bit)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td>ThinkPad    Tablet 2</td>
+            <td>Affected</td>
+            <td>&minus;</td>
+            <td>BIOS update is not supported on this    chipset</td>
+        </tr>
+        <tr>
+            <td>ThinkPad    Tablet 8 (32-bit)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td>ThinkPad    Tablet 8 (64-bit</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td>ThinkPad    Twist/S230u</td>
+            <td>Affected</td>
+            <td>GDETB0WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS032000">http://support.lenovo.com/us/en/downloads/DS032000</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad W530</td>
+            <td>Affected</td>
+            <td>G5ETA2WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-w-series-laptops/thinkpad-w530/downloads/DS029169">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-w-series-laptops/thinkpad-w530/downloads/DS029169</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad    W540/W541</td>
+            <td>Affected</td>
+            <td>GNET73WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-w-series-laptops/thinkpad-w540/downloads/DS039077">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-w-series-laptops/thinkpad-w540/downloads/DS039077</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad W550s</td>
+            <td>Affected</td>
+            <td>N11ET31W<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-w-series-laptops/thinkpad-w550s/downloads/DS102339">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-w-series-laptops/thinkpad-w550s/downloads/DS102339</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X1    Carbon (20Ax)</td>
+            <td>Affected</td>
+            <td>GRET44WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-type-20a7-20a8/downloads/DS039782">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-type-20a7-20a8/downloads/DS039782</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X1    Carbon (20Bx)</td>
+            <td>Affected</td>
+            <td>N14ET28W</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-20bs-20bt/downloads/DS101975">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-20bs-20bt/downloads/DS101975</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X1    Carbon (34xx)</td>
+            <td>Affected</td>
+            <td style="width: 136px;">G6ETB1WW</td>
+            <td style="width: 454px;"><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-type-34xx/downloads/DS030684">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-type-34xx/downloads/DS030684</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X131e    (AMD)</td>
+            <td>Affected</td>
+            <td>G9ETA0WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x131e/downloads/DS029771">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x131e/downloads/DS029771</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X131e    (Intel)</td>
+            <td>Affected</td>
+            <td>G8ETA1WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x131e/downloads/DS029771">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x131e/downloads/DS029771</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X140e    (AMD)</td>
+            <td>Affected</td>
+            <td>GSET63WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x140e/downloads/DS038561">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x140e/downloads/DS038561</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X230    Tablet; X230i</td>
+            <td>Affected</td>
+            <td>GCETA2WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-tablet-laptops/thinkpad-x230-tablet/downloads/DS029683">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-tablet-laptops/thinkpad-x230-tablet/downloads/DS029683</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X230,    X230i</td>
+            <td>Affected</td>
+            <td>G2ETA4WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x230/downloads/DS029187">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x230/downloads/DS029187</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad    X230s/X231s</td>
+            <td>Affected</td>
+            <td>GGET24WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x230s/downloads/DS034847">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x230s/downloads/DS034847</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X240</td>
+            <td>Affected</td>
+            <td>GIET80WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x240/downloads/DS035950">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x240/downloads/DS035950</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X240s</td>
+            <td>Affected</td>
+            <td>GIET80WW</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x240s/downloads/DS035950">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x240s/downloads/DS035950</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad X250    (Broadwell)</td>
+            <td>Affected</td>
+            <td>N10ET30W</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x250/downloads/DS102288">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x250/downloads/DS102288</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Yoga    11e</td>
+            <td>Affected</td>
+            <td>N15ET56W</td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-11e/downloads/DS041529">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-11e/downloads/DS041529</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Yoga    12</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability 7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkPad Yoga 14 (Broadwell)</td>
+            <td>Affected</td>
+            <td>JFET36WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-14/downloads/DS101225">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-14/downloads/DS101225</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Yoga    14 (Sharkbay)</td>
+            <td>Affected</td>
+            <td>JGET25WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-14/downloads/DS101225">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-14/downloads/DS101225</a></td>
+        </tr>
+        <tr>
+            <td>ThinkPad Yoga    15</td>
+            <td>Affected</td>
+            <td>N19ET35WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-15/downloads/DS102341">http://support.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-yoga-series-laptops/thinkpad-yoga-15/downloads/DS102341</a></td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_1">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre E73Z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">FGKT38A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m83z">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m83z</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre E93</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS035753">http://support.lenovo.com/us/en/downloads/DS035753</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    E93Z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">FFKT38A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-e-series-desktops/thinkcentre-e93z">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-e-series-desktops/thinkcentre-e93z</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    Edge 62z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">F8KT37A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS031473">http://support.lenovo.com/us/en/downloads/DS031473</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    Edge 63z</td>
+            <td>Affected</td>
+            <td>FQKT28A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS100926">http://support.lenovo.com/us/en/downloads/DS100926</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    Edge 72</td>
+            <td>Affected</td>
+            <td>F1KT69A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029433">http://support.lenovo.com/us/en/downloads/DS029433</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre Edge 72z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">F6KT40A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029266">http://support.lenovo.com/us/en/downloads/DS029266</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    Edge 92z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">9XKT32A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS030110">http://support.lenovo.com/us/en/downloads/DS030110</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M53</td>
+            <td>Affected</td>
+            <td>FRKT37A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101009">http://support.lenovo.com/us/en/downloads/DS101009</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M62Z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">F0KT43A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS030249">http://support.lenovo.com/us/en/downloads/DS030249</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M72e (Ivy)</td>
+            <td>Affected</td>
+            <td>F1KT69A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029433">http://support.lenovo.com/us/en/downloads/DS029433</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M72e (PCI)</td>
+            <td>Affected</td>
+            <td>F9KT55A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS031119">http://support.lenovo.com/us/en/downloads/DS031119</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M72e (Tiny)</td>
+            <td>Affected</td>
+            <td style="width: 136px;">F4KT52A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029184">http://support.lenovo.com/us/en/downloads/DS029184</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M72z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">F6KT40A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029266">http://support.lenovo.com/us/en/downloads/DS029266</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M73</td>
+            <td>Affected</td>
+            <td>FCKT69A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS038324">http://support.lenovo.com/us/en/downloads/DS038324</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M73 Tiny</td>
+            <td>Affected</td>
+            <td>FHKT57A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds038325">http://support.lenovo.com/us/en/downloads/ds038325</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M73Z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">FGKT38A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m83z">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m83z</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M78 (type 10BN, 10BQ, 10BR, 10BS, 10BT, 10BU)&nbsp;</td>
+            <td>Affected</td>
+            <td style="width: 136px;">FNKT41A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS038364">http://support.lenovo.com/us/en/downloads/DS038364</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M79</td>
+            <td>Affected</td>
+            <td>FPKT33A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m79/downloads/DS100923">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m79/downloads/DS100923</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M83</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds035753">http://support.lenovo.com/us/en/downloads/ds035753</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M83Z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">FGKT38A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m83z">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m83z</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M92</td>
+            <td>Affected</td>
+            <td style="width: 136px;">9SKT88A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029265">http://support.lenovo.com/us/en/downloads/DS029265</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M92P</td>
+            <td>Affected</td>
+            <td style="width: 136px;">9SKT88A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029265">http://support.lenovo.com/us/en/downloads/DS029265</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M92Z</td>
+            <td>Affected</td>
+            <td>9NKT66A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029443">http://support.lenovo.com/us/en/downloads/DS029443</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M93</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds035753">http://support.lenovo.com/us/en/downloads/ds035753</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M93P</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds035753">http://support.lenovo.com/us/en/downloads/ds035753</a></td>
+        </tr>
+        <tr>
+            <td style="width: 211px;">ThinkCentre M93P Tiny</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds035753">http://support.lenovo.com/us/en/downloads/ds035753</a></td>
+        </tr>
+        <tr>
+            <td>ThinkCentre    M93Z</td>
+            <td>Affected</td>
+            <td style="width: 136px;">FEKT90A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS036004">http://support.lenovo.com/us/en/downloads/DS036004</a></td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_2">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation    C30 <br />
+            (type 1095, 1096, 1097)</td>
+            <td>Affected</td>
+            <td>A1KT53A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS028464">http://support.lenovo.com/us/en/downloads/DS028464</a></td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation C30 <br />
+            (type 1136, 1137)</td>
+            <td>Affected</td>
+            <td>A3KT50A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS035725">http://support.lenovo.com/us/en/downloads/DS035725</a></td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation D30&nbsp; <br />
+            (type 4223, 4228, 4229)&nbsp;</td>
+            <td>Affected</td>
+            <td>A1KT53A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS028464">http://support.lenovo.com/us/en/downloads/DS028464</a><br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation D30&nbsp; <br />
+            (type 4353, 4354)&nbsp;</td>
+            <td>Affected</td>
+            <td>A3KT50A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS035725">http://support.lenovo.com/us/en/downloads/DS035725</a></td>
+        </tr>
+        <tr>
+            <td>ThinkStation    E31</td>
+            <td>Affected</td>
+            <td style="width: 136px;">9SKT88A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS029265">http://support.lenovo.com/us/en/downloads/DS029265</a></td>
+        </tr>
+        <tr>
+            <td>ThinkStation    E32</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds035753">http://support.lenovo.com/us/en/downloads/ds035753</a></td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation P300</td>
+            <td>Affected</td>
+            <td>FBKTA7A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/ds035753">http://support.lenovo.com/us/en/downloads/ds035753</a></td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation P500</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation P700</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation P900</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation S30 (type 0567, 0568, 0569, 0606)</td>
+            <td>Affected</td>
+            <td>A0KT53A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS028141">http://support.lenovo.com/us/en/downloads/DS028141</a></td>
+        </tr>
+        <tr>
+            <td style="width: 229px;">ThinkStation S30 (type 4351, 4352)</td>
+            <td>Affected</td>
+            <td>A2KT50A</td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS035724">http://support.lenovo.com/us/en/downloads/DS035724</a></td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_3">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td>ThinkServer RD330</td>
+            <td style="width: 209px;">Affected</td>
+            <td style="width: 125px;">BIOS v9.4</td>
+            <td style="width: 451px;"><a href="http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd330">http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd330</a></td>
+        </tr>
+        <tr>
+            <td style="width: 184px;">ThinkServer RD340</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td style="width: 184px;">ThinkServer RD350</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD430</td>
+            <td>Affected</td>
+            <td>BIOS v9.4</td>
+            <td><a href="http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd430">http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd430</a></td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD440</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD450</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD530</td>
+            <td>Affected</td>
+            <td>BIOS v9.4</td>
+            <td><a href="http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd530">http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd530</a></td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD540</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD550</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD630</td>
+            <td>Affected</td>
+            <td>BIOS v9.4</td>
+            <td><a href="http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd630">http://support.lenovo.com/us/en/products/servers/thinkserver-rack-servers/thinkserver-rd630</a></td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD640</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RD650</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RQ940</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    RS140</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability    7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TD340</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TD350</td>
+            <td>Not affected</td>
+            <td>&nbsp;</td>
+            <td>Initial shipment    included mitigation</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TS130</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability    7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TS140</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability    7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TS240</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability    7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TS430</td>
+            <td>Researching</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TS440</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability    7/17/2015</td>
+        </tr>
+        <tr>
+            <td>ThinkServer    TS540</td>
+            <td>Affected</td>
+            <td>&nbsp;</td>
+            <td>Target availability    7/17/2015</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_4">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC EZ Media &amp; Backup (hm3)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC Home Media Cloud Edition (hm2)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix12-300r</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix2 (inc DL)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix2-200</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix2-200 Cloud Edition</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix4-200d&nbsp;</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix4-200d (2.1.x firmware)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix4-200d Cloud Edition</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC ix4-300d (inc DL)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px12-350r</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px12-400r</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px12-450r</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px2-300d (inc NVR)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px4-300d (inc NVR)</td>
+            <td>Researching</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px4-300r</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px4-400d (inc NVR)</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px4-400r</td>
+            <td>Not affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 275px;">LenovoEMC px6-300d</td>
+            <td>Researching</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_0_5">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B40-30</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9CCN31WW(V2.09)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101220">http://support.lenovo.com/us/en/downloads/DS101220</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B40-45</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B40-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9DCN32WW(V3.02)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101224">http://support.lenovo.com/us/en/downloads/DS101224</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B490</td>
+            <td style="width: 209px;">Affected</td>
+            <td>H9ET90WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS032260">http://support.lenovo.com/us/en/downloads/DS032260</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B50-30</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9CCN31WW(V2.09)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101220">http://support.lenovo.com/us/en/downloads/DS101220</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B50-45</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B50-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9DCN32WW(V3.02)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101224">http://support.lenovo.com/us/en/downloads/DS101224</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">E10-30</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">E40-30</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9CCN31WW(V2.09)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101220">http://support.lenovo.com/us/en/downloads/DS101220</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">E40-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9DCN32WW(V3.02)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101224">http://support.lenovo.com/us/en/downloads/DS101224</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">E50-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9DCN32WW(V3.02)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101224">http://support.lenovo.com/us/en/downloads/DS101224</a><br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 10</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 2 14 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 2 14 (Haswell)</td>
+            <td style="width: 209px;">Affected</td>
+            <td>A0CN35WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101193">http://support.lenovo.com/us/en/downloads/DS101193</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 2 14 (Baytrail-M)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 2 14D/ Flex2 15D</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9FCN25WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101002">http://support.lenovo.com/us/en/downloads/DS101002</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 2 Pro-15 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 2 Pro-15 (Haswell)</td>
+            <td style="width: 209px;">Affected</td>
+            <td>B9CN16WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101359">http://support.lenovo.com/us/en/downloads/DS101359</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 3 11</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 3 1470 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 3 1470 (Haswell)</td>
+            <td style="width: 209px;">Affected</td>
+            <td>BDCN30WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS102775">http://support.lenovo.com/us/en/downloads/DS102775</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 3 1475</td>
+            <td style="width: 209px;">Not Affected<br />
+            </td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex 3 1535</td>
+            <td style="width: 209px;">Not Affected<br />
+            </td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex3 1570 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex3 1570 (Haswell)</td>
+            <td style="width: 209px;">Affected</td>
+            <td>BDCN30WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS102775">http://support.lenovo.com/us/en/downloads/DS102775</a><br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Flex3 1575&nbsp;</td>
+            <td style="width: 209px;">Not Affected<br />
+            </td>
+            <td>&minus;<br />
+            </td>
+            <td>&minus;<br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G40-30</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G40-45</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G40-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G40-75</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G40-80 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G41-35</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G50-30</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G50-45</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G50-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G50-75</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G50-80 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G51-35</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G70-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">G70-80 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">K20-80</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">K2450</td>
+            <td style="width: 209px;">Affected</td>
+            <td>J2ET40WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS100835">http://support.lenovo.com/us/en/downloads/DS100835</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">K4450</td>
+            <td style="width: 209px;">Affected</td>
+            <td>J8ET43WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101630">http://support.lenovo.com/us/en/downloads/DS101630</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">M40-35</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">M50-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>B3CN23WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS101348">http://support.lenovo.com/us/en/downloads/DS101348</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">M50-80</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">MIIX 2 10</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Miix 2 11</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Miix 2 8</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Miix 3 10</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">S20-30</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">S41-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">S435</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Y40-80</td>
+            <td style="width: 209px;">Affected</td>
+            <td>B5CN36WW(V2.02)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS102685">http://support.lenovo.com/us/en/downloads/DS102685</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Y410/Y510</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Y430P</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Y50-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9ECN37WW(V2.01)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS100998">http://support.lenovo.com/us/en/downloads/DS100998</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Y70-70</td>
+            <td style="width: 209px;">Affected</td>
+            <td>9ECN37WW(V2.01)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS100998">http://support.lenovo.com/us/en/downloads/DS100998</a><br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Yoga 2 13</td>
+            <td style="width: 209px;">Affected</td>
+            <td>96CN30WW(V1.16)<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS100939">http://support.lenovo.com/us/en/downloads/DS100939</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Yoga 2 11 (Baytrail-M)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Yoga2 11 (Haswell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Yoga2 Pro</td>
+            <td style="width: 209px;">Affected</td>
+            <td>76CN46WW<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/downloads/DS035004">http://support.lenovo.com/us/en/downloads/DS035004</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Yoga3 14</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Yoga3 Pro</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z40-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z40-75</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z40-80 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z50-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z50-75</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z50-80 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z70-70</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">Z70-80 (Broadwell)</td>
+            <td style="width: 209px;">Not    Affected</td>
+            <td>&minus;</td>
+            <td>&minus;</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+                </div>
+            </div>
+            <div>
+                <ul class="fluid-row accessOptions-tabs resp-tabs-list">
+        <li role="tab" aria-controls="tab_item-0" class="cell2" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_1_0">
+            <div class="contactUs-tile gray-bg">
+<div class="fluid-row">
+<div class="cell8 stack-fix contactUs-tile-label">Lenovo Desktop</div>
+</div>
+</div>
+        </li>
+                </ul>
+                <!-- Tab Content #1 -->
+                <div class="resp-tabs-container accessServices-tabs-container" id="NewTileListContent">
+        <div style="display: none;" class="fluid-row resp-tab-content resp-tab-content-active" itemIndex="b9e59df4_ac35_4a8d_848b_576f6d9c3939_1_0">
+            <div class="cell12 accessOptions-tabs-container">
+                <a class="close-tab"><span class="close-button">close</span></a>
+                <table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <th style="width: 275px;">System
+            </th>
+            <th style="width: 100px;">Status
+            </th>
+            <th style="width: 145px;">Minimum&nbsp; version<br />
+            including Fix
+            </th>
+            <th style="width: 500px;">Link&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td>63 Desktop</td>
+            <td>Affected</td>
+            <td>FCKT69A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-63-series-desktops/lenovo-63-desktop/downloads/DS101301">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-63-series-desktops/lenovo-63-desktop/downloads/DS101301</a></td>
+        </tr>
+        <tr>
+            <td>A540 All In    One&nbsp; (Broadwell)</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O14KT15AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS102570">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS102570</a></td>
+        </tr>
+        <tr>
+            <td>A740    All-In-One - BDW</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O14KT15AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS102570">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS102570</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B40-30&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>O0CKT23A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b40-30-all-in-one/downloads/DS101240">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b40-30-all-in-one/downloads/DS101240</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">B40-30 Touch All-In-One</td>
+            <td>Affected</td>
+            <td>O0CKT23A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b40-30-all-in-one/downloads/DS101240">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b40-30-all-in-one/downloads/DS101240</a></td>
+        </tr>
+        <tr>
+            <td>B50-30&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>O0BKT21A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b50-30-all-in-one/downloads/DS101243">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b50-30-all-in-one/downloads/DS101243</a></td>
+        </tr>
+        <tr>
+            <td>B50-30 Touch    All-In-One</td>
+            <td>Affected</td>
+            <td>O0BKT21A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b50-30-all-in-one/downloads/DS101243">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-b-series-all-in-ones/lenovo-b50-30-all-in-one/downloads/DS101243</a></td>
+        </tr>
+        <tr>
+            <td>B5035</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O0AKT18AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS101270">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS101270</a></td>
+        </tr>
+        <tr>
+            <td>B50-35&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O0AKT18AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS101270">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-a-series-all-in-ones/lenovo-a540-all-in-one/downloads/DS101270</a></td>
+        </tr>
+        <tr>
+            <td>C20-05    All-In-One</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O0GKT30AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c560-all-in-one/downloads/DS101524">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c560-all-in-one/downloads/DS101524</a></td>
+        </tr>
+        <tr>
+            <td>C20-30    All-In-One</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O0EKT30AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c560-all-in-one/downloads/DS101522">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c560-all-in-one/downloads/DS101522</a></td>
+        </tr>
+        <tr>
+            <td>C260    All--In-One</td>
+            <td>Affected</td>
+            <td>IXKT26AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c260-all-in-one/downloads/DS100767">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c260-all-in-one/downloads/DS100767</a></td>
+        </tr>
+        <tr>
+            <td>C260 Touch    All-In-One</td>
+            <td>Affected</td>
+            <td>IXKT26AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c260-all-in-one/downloads/DS100767">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c260-all-in-one/downloads/DS100767</a></td>
+        </tr>
+        <tr>
+            <td>C360&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>IMKT19AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101336">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101336</a></td>
+        </tr>
+        <tr>
+            <td>C365&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>O0MKT13A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101298">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101298</a></td>
+        </tr>
+        <tr>
+            <td>C40-05&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>O0KKT15AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c40-05-all-in-one/downloads/DS101493">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c40-05-all-in-one/downloads/DS101493</a></td>
+        </tr>
+        <tr>
+            <td>C40-30&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>O0HKT17AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101525">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101525</a></td>
+        </tr>
+        <tr>
+            <td>C460&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>IMKT19AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101336">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101336</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">C470&nbsp; All-In-One</td>
+            <td>Affected</td>
+            <td>O0DKT18AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101337">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101337</a></td>
+        </tr>
+        <tr>
+            <td>C50-30    All-In-One</td>
+            <td>Affected</td>
+            <td>O0IKT17A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c50-30-all-in-one/downloads/DS101470">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c50-30-all-in-one/downloads/DS101470</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">C5030-non-Touch</td>
+            <td>Affected</td>
+            <td>O0IKT17A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c50-30-all-in-one/downloads/DS101470">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c50-30-all-in-one/downloads/DS101470</a></td>
+        </tr>
+        <tr>
+            <td style="width: 247px;">C560 All-In-One</td>
+            <td>Affected</td>
+            <td style="width: 136px;">INKT30AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c560-all-in-one/downloads/DS101700">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/lenovo-c560-all-in-one/downloads/DS101700</a></td>
+        </tr>
+        <tr>
+            <td>E50-00 Deskop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O07KT52AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/e-series-desktop/lenovo-e50-00-desktop/downloads/DS101341">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/e-series-desktop/lenovo-e50-00-desktop/downloads/DS101341</a></td>
+        </tr>
+        <tr>
+            <td>ErazerX700    Desktop</td>
+            <td>Affected</td>
+            <td>IUKT19AUS<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-erazer-x-series-desktops/lenovo-erazer-x700-desktop/downloads/DS101745">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-erazer-x-series-desktops/lenovo-erazer-x700-desktop/downloads/DS101745</a></td>
+        </tr>
+        <tr>
+            <td>H30-00 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O07KT52AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/e-series-desktop/lenovo-e50-00-desktop/downloads/DS101341">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/e-series-desktop/lenovo-e50-00-desktop/downloads/DS101341</a></td>
+        </tr>
+        <tr>
+            <td>H30-05 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O06KT18A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101299">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101299</a></td>
+        </tr>
+        <tr>
+            <td>H30-50 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">IEKT31A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277</a></td>
+        </tr>
+        <tr>
+            <td>H50-00 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O07KT52AUS</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/e-series-desktop/lenovo-e50-00-desktop/downloads/DS101341">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/e-series-desktop/lenovo-e50-00-desktop/downloads/DS101341</a></td>
+        </tr>
+        <tr>
+            <td>H50-05 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O06KT18A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101299">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101299</a></td>
+        </tr>
+        <tr>
+            <td>H50-30g    Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">IEKT31A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277</a></td>
+        </tr>
+        <tr>
+            <td>H50-50 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">IEKT31A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277</a></td>
+        </tr>
+        <tr>
+            <td>H530 Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">IEKT31A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277</a></td>
+        </tr>
+        <tr>
+            <td>H530s Desktop</td>
+            <td>Affected</td>
+            <td style="width: 136px;">IEKT31A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-h-series-desktops/lenovo-h530-desktop/downloads/DS101277</a></td>
+        </tr>
+        <tr>
+            <td>Horizon 2 27    Table PC</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O02KT21A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2-27-table-pc-ideacentre/downloads/DS101244">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2-27-table-pc-ideacentre/downloads/DS101244</a></td>
+        </tr>
+        <tr>
+            <td>Horizon2e    Table PC</td>
+            <td>Affected</td>
+            <td>O08KT22A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101046">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2e-table-pc/downloads/DS101046</a></td>
+        </tr>
+        <tr>
+            <td>Horizon2s    Table PC</td>
+            <td>Affected</td>
+            <td style="width: 136px;">O0FKT16A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2s-table-pc/downloads/DS101154">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/horizon-series/horizon-2s-table-pc/downloads/DS101154</a></td>
+        </tr>
+        <tr>
+            <td>M4350 Desktop</td>
+            <td>Affected</td>
+            <td>F9KT55A<br />
+            </td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/m-series/lenovo-m4350-desktop/downloads/DS101302">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/m-series/lenovo-m4350-desktop/downloads/DS101302</a></td>
+        </tr>
+        <tr>
+            <td>S40-40    All-In-One</td>
+            <td>Affected</td>
+            <td style="width: 136px;">IZKT22A</td>
+            <td><a href="http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101300">http://support.lenovo.com/us/en/products/desktops-and-all-in-ones/lenovo-s-series-all-in-ones/lenovo-s40-40-all-in-one/downloads/DS101300</a></td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+                </div>
+            </div>
+    </div>
+
+
+<div data-jscomponent="RichText">
+                <strong>Acknowledgements:&nbsp;</strong>None<strong><br />
+</strong>
+<br />
+<strong>Other information and references:</strong><br />
+<ul>
+    <li><a href="http://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html">http://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html</a></li>
+    <li><a href="http://ddrdetective.com/files/6414/1036/5710/The_Known_Failure_Mechanism_in_DDR3_memory_referred_to_as_Row_Hammer.pdf">http://ddrdetective.com/files/6414/1036/5710/The_Known_Failure_Mechanism_in_DDR3_memory_referred_to_as_Row_Hammer.pdf</a></li>
+</ul>
+<strong>Revision History:</strong><br />
+<table border="1">
+    <tbody>
+        <tr>
+            <td style="color: #ffffff; background-color: #000000;"><strong>Revision&nbsp;</strong></td>
+            <td style="color: #ffffff; background-color: #000000;"><strong>Date</strong></td>
+            <td style="color: #ffffff; background-color: #000000;"><strong>Description&nbsp;</strong></td>
+        </tr>
+        <tr>
+            <td>1.3</td>
+            <td>30 Jun 2015<br />
+            </td>
+            <td>Publish additional fixes</td>
+        </tr>
+        <tr>
+            <td>1.2</td>
+            <td>15 May 2015<br />
+            </td>
+            <td>Publish additional fixes</td>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>14 Apr 2015<br />
+            </td>
+            <td>Publish additional fixes</td>
+        </tr>
+        <tr>
+            <td>1.0</td>
+            <td>13 Mar 2015<br />
+            </td>
+            <td>Initial release</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<div><br />
+</div>
+</div>
+</div>
+
+        </div>
+
+        <footer class="footerBg">
+    <div class="website-width">
+<div class="footer-wrapper">
+<div class="fluid-row">
+<div style="margin-left: 75px;" class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px;"><a target="_top" style="font-family: arial, Helvetica, sans-serif; font-weight: bold; color: #ffffff; line-height: 18px; text-decoration: none;" href="http://www.lenovo.com/lenovo/us/en/index.html?ref-id=support&amp;">ABOUT LENOVO</a></h5>
+</div>
+<ul class="footer-list">
+    <li><a href="http://www.lenovo.com/lenovo/us/en/our_company.html?ref-id=support&amp;">Our Company</a> </li>
+    <li><a href="http://news.lenovo.com/?ref-id=support&amp;">News</a> </li>
+    <li><a href="http://www.lenovo.com/ww/lenovo/investor_relations.html?ref-id=support&amp;">Investor Relations</a> </li>
+    <li><a href="http://www.lenovo.com/social_responsibility/us/en/index.html?ref-id=support&amp;">Social responsibility</a> </li>
+    <li><a href="http://www.lenovo.com/compliance">Product Compliance</a> </li>
+    <li><a href="http://www.lenovo.com/legal/us/en/?ref-id=support&amp;">Legal information</a> </li>
+    <li><a href="http://www.lenovo.com/jobs/us/en/index.html?ref-id=support&amp;">Jobs at Lenovo</a> </li>
+    <li><a href="http://www.lenovo.com/articles/us/en/">Articles</a> </li>
+</ul>
+</div>
+<div class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px; text-transform: uppercase;"><a target="_top" style="font-family: arial, Helvetica, sans-serif; font-weight: bold; color: #ffffff; line-height: 18px; text-decoration: none;" href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Portals/Products&amp;ref-id=support&amp;">SHOP</a> </h5>
+</div>
+<ul class="footer-list">
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:CompareByNeed?current-category-id=653343E0DE54435882FABC3CE1BC569A&amp;menu-id=products&amp;current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;ref-id=support&amp;">Laptops &amp; netbooks</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:category.details?current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;current-category-id=F711F204FCB6F694B7E57D36CC727E1E">Tablets</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:show-category?category-id=FFA158AAECE944CD9055899B3280EA36&amp;current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;ref-id=support&amp;">Desktops &amp; all-in-ones</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Landing_pages/Info/09/Workstation&amp;ref-id=support&amp;">Workstations</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Landing_pages/ThinkServer/08/Introducing&amp;ref-id=support&amp;">Servers</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:show-category-with-items?category-id=9B7E41BDCE704020B8E567C67D3FA082&amp;current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;ref-id=support&amp;">Accessories &amp; upgrades</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Special%20Offers/Overview&amp;ref-id=support&amp;">Special offers</a> </li>
+    <li><a href="http://outlet.lenovo.com/?ref-id=support&amp;">Outlet</a> </li>
+</ul>
+</div>
+<div class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px; text-transform: uppercase;">Support </h5>
+</div>
+<ul class="footer-list">
+    <li><a data-type="ServicerLoginUrl" href="#">Servicer Login</a> </li>
+    <li><a href="/products?tabName=Downloads">Downloads</a> </li>
+    <li><a href="/products?tabName=Manuals">Manuals</a> </li>
+    <li><a href="/products?tabName=Video">Videos</a> </li>
+    <li><a href="/find-solution?tabName=Solutions">Solutions</a> </li>
+    <li><a href="/us/en/warrantylookup">Warranty Lookup</a> </li>
+    <li><a href="/us/en/preproductselect">Contact Us</a> </li>
+    <li><a href="http://support.lenovoemc.com">Storage Support</a> </li>
+</ul>
+</div>
+<div class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px; text-transform: uppercase;">Resources </h5>
+</div>
+<ul class="footer-list">
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Landing_pages/Lenovo_general/reseller_locator&amp;ref-id=support&amp;">Where to buy</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Shopping_FAQ/shopping_faq&amp;ref-id=support&amp;">Shopping help</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Shopping_FAQ/order-status&amp;ref-id=support&amp;">Order status</a> </li>
+    <li><a href="http://lenovosocial.com/">Blogs &amp; forums</a> </li>
+    <li><a href="http://www.lenovo.com/training/?ref-id=support&amp;">Training</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/account.workflow:StartSignUpCommPreference?ref-id=support&amp;">Email signup</a> </li>
+    <li><a href="http://www.lenovo.com/registration/index.html?ref-id=support&amp;">Product registration</a> </li>
+</ul>
+</div>
+<div class="cell3">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px;">FOLLOW US</h5>
+</div>
+<ul class="footer-icon-list">
+    <li><a title="Google+" href="https://plus.google.com/115831017343671643958"><span class="icon ft-gplus">Google+</span></a></li>
+    <li><a title="Twitter" href="http://twitter.com/lenovo"><span class="icon ft-twitter">Twitter</span> </a></li>
+    <li><a title="Facebook" href="http://www.facebook.com/lenovo"><span class="icon ft-facebook">Facebook</span> </a></li>
+    <li><a title="Flickr" href="http://www.flickr.com/photos/lenovophotolibrary/collections/"><span class="icon ft-flickr">Flickr</span> </a></li>
+    <li><a title="YouTube" href="http://www.youtube.com/lenovovision"><span class="icon ft-youtube">YouTube</span> </a></li>
+    <li><a title="Lenovo Forums" href="http://forums.lenovo.com/"><span class="icon ft-forums">Lenovo Forums</span> </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div style="padding-right: 0px;" class="footer-bottom">
+<p class="footer-wrapper">
+<a style="color: #a7a7a7;" href="javascript:void(0);">&copy; 2015 Lenovo. All rights reserved.</a> |
+<a style="color: #a7a7a7;" href="javascript:window.print();">Print this page</a> |
+<a style="color: #a7a7a7;" href="http://shop.lenovo.com/us/en/legal/">Terms of use</a> |&nbsp;
+<a style="color: #a7a7a7;" href="http://www.lenovo.com/privacy/us/en/">Privacy</a> |
+<a href="/us/en/sitemap">Site map</a>
+</p>
+<p class="footer-wrapper">
+<a href="/us/en/browsercompatibility">Browser Compatibility</a>
+</p>
+</div>
+<!-- added by Vikram on 5/28 -->
+<!--
+<div class="footer-bottom" style="padding-right: 0px;">
+<p class="footer-wrapper">
+<a href="http://10.38.24.30:8080/browser-compatibility.html">Browser Compatibility</a>
+</p>
+</div>
+-->
+</footer>
+
+
+
+<div class="ui-widget" data-jscomponent="CookieBar">
+    <div class="cookie-message ui-widget-header blue">
+        <p>By using this website you allow us to place cookies on your computer. They are harmless and never personally identify you.</p>
+        <a class="close-button">Continue</a>
+    </div>
+</div>
+
+
+<div data-jscomponent="GoogleAnalytics">
+    <div style="display: none" id="apiKey">UA-20013709-3</div>
+    <div style="display: none" id="hassiteSpeed">True</div>
+    <div style="display: none" id="setSiteSpeed">100</div>
+</div>
+
+        <script src="/bundles/jquery?v=fSzuJDr9A7W546aIJmYa1W3OK3f1ezYNdk92s8jr9kE1"></script>
+
+        <script src="/bundles/CountrySwitch?v=nzlbzF4pRRPqzyPaPhQwVLPP0kUrKKuBqx8aOwY0Kws1"></script>
+<script src="/bundles/accountLogin?v=YWczejRubfgDKGj1M5L8VaAo1QQTVWm_D2OBVgATdkQ1"></script>
+<script src="/bundles/contacts?v=DUFXs9HmFyhirZkyjEvDDsgBu4egNY-W61Kt_o6rA681"></script>
+<script src="/bundles/LiveFloatChat?v=dPLbRMNpRIcmbf-p34jqV3Mo4AgyxToeFPEGbJiCFdI1"></script>
+<script src="/bundles/opinionlab?v=jr8CtCI2XLKAokMNdu2ZquLBVBTDRVwEXpvgPmf8FS41"></script>
+<script src="/bundles/navigationbar?v=ogs_DeUK0NeLyoH8xvQ42SlVJUIaaADfs-XO3lpCevo1"></script>
+<script src="/bundles/BrowserVersion?v=d12U-K8sPZqYPhJY0INS6G3U_19Ot8ULXI-pAKWLBnQ1"></script>
+<script src="/bundles/RichText?v=-XdvhT--31p8IZQSxx1w_Cvs-VJp3AnRm7j3U88kyqU1"></script>
+<script src="/bundles/NewTileList?v=_pU1mZj6oCtGMpGdBMjQGx20xtei6k6BMiQ52fth-e41"></script>
+<script src="/bundles/LiveChat?v=_NsM_4NCq4YqYJ313FWJ8ZogY7ZLzIM0Rh1ful4YuF01"></script>
+<script src="/bundles/cookieBar?v=qGMW1GrBcxvPG0VbwhgCos5vcIROwnxymx5Cm9Z-MCQ1"></script>
+<script src="/bundles/GoogleAnalytics?v=2qE_SH5wbo97ldeNrf5W4WnBmNtMHW170_3uKTWyi881"></script>
+
+
+        
+            <script type="text/javascript">
+                if (typeof _satellite != 'undefined')
+                    _satellite.pageBottom();
+            </script>
+    </body>
+</html>

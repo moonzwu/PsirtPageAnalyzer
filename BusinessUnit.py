@@ -7,18 +7,16 @@ class BusinessUnit():
      vulnerability and device
     '''
 
-    name = ''
+    name = '' # unique key
     itemIndex = ''
-    lenovoCode = ''
-    productList = []
+    productCodeList = []
 
-    def __init__(self, name, lenovoCode, itemIndex):
+    def __init__(self, name, itemIndex):
         self.name = name
-        self.lenovoCode = lenovoCode
         self.itemIndex = itemIndex
 
     def addDevice(self, deviceName):
-        self.productList.append(deviceName)
+        self.productCodeList.append(deviceName)
 
     def to_json(self):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
