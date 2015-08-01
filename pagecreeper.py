@@ -6,8 +6,8 @@ import logging
 from requests.exceptions import *
 from multiprocessing import Pool
 from vulnerability import Vulnerability
-from businessunit import BusinessUnit
-from product import Product
+from BusinessUnit import BusinessUnit
+from Product import Product
 
 lenovoSupportHome = 'http://support.lenovo.com'
 severityFlag = 'Severity:'
@@ -27,6 +27,13 @@ def clearSpecialChars(inputStr):
 def extractCVEcode(contentText):
     return re.findall(cveRep, contentText, re.M | re.I)
 
+def selectValidCVETextBlock(entireVulContent):
+    lis = entireVulContent.find_all('li')
+    for li in lis:
+        validCVEContent = html2text.html2text(li.get_text())
+        if (validCVEContent.find("CVE ID:") != -1):
+            return validCVEContent
+    return ''
 
 def parseVulRow(tableRow):
     tdElems = tableRow.find_all('td')

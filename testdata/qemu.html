@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html itemscope="" lang="en-US">
+    <head>
+        <title>QEMU i8254 PIT Emulation Bug - Lenovo Support (US)</title>
+        
+        <meta itemprop="server-info" content="RDUWPESP008" />
+        <meta itemprop="version" content="13.9.0" />
+        <meta itemprop="page-id" content="bf46eddd-bfaa-4ce9-aea1-703f8f096b2d" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+            <meta name="description" content="A vulnerability was reported in QEMU where a local user on the guest system could potentially obtain elevated privileges on the target host system. This vulnerability was reported to Red Hat and has been assigned CVE-2015-3214." />
+                            <meta name="Title" content="QEMU i8254 PIT Emulation Bug" />
+            <meta name="Language" content="en_US" />
+            <meta name="Country" content="US" />
+            <meta name="PageStatus" content="Active" />
+            <meta name="Description" content="A vulnerability was reported in QEMU where a local user on the guest system could potentially obtain elevated privileges on the target host system. This vulnerability was reported to Red Hat and has been assigned CVE-2015-3214." />
+            <meta name="Lenovo.Country" content="US" />
+            <meta name="InternalSearchCanonical" content="http://support.lenovo.com/us/en/product_security/qemu" />
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                
+    
+            <script type="text/javascript" src="/dtagent61_jn_8154.js" data-dtconfig="rid=RID_912001514|rpid=1850257063|domain=lenovo.com|tp=500,50,0|reportUrl=dynaTraceMonitor"></script><link rel="canonical" href="http://support.lenovo.com/us/en/product_security/qemu" />
+        <!--[if lt IE 7]><html class="ie ie6 lte9 lte8 lte7" lang="en"><![endif]-->
+        <!--[if IE 7]><html class="ie ie7 lte9 lte8" lang="en"><![endif]-->
+        <!--[if IE 8]><html class="ie ie8 lte9" lang="en"><![endif]-->
+        <!--[if IE 9]><html class="ie ie9" lang="en"><![endif]-->
+        <!--[if gt IE 9]><html lang="en"><![endif]-->
+        <!--[if !IE]><html lang="en"><![endif]-->
+        <!--[if lt IE 9]>
+            <script type="text/javascript">
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('section');
+                document.createElement('footer');
+            </script>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+            <link rel="stylesheet" href="/app/themes/base/IE.css" type="text/css">
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script>
+        <![endif]-->
+        <link href="/bundles/themes/ESupport?v=89bg0PvHxRscnHY3bIqfacKDdvpdQQLl8CcLnQV2tt81" rel="stylesheet"/>
+
+        
+        
+            <script type="text/javascript"
+                    src="//assets.adobedtm.com/9f0b01d01b963414024fff848ca9d3750437e1fa/satelliteLib-049b1f0ec32513967b9eef550a7aa4db75461d8a.js">
+            
+            </script>
+            <script type="text/javascript">
+                var lmd = {"cc":"US","bu":"support","language":"en","section":"support","subsection":"/product_security/qemu","loginInfo":{"loginStatus":"logged out"}};
+            </script>
+        
+    </head>
+    <body class="hasCookie">
+        <header>
+<div class="website-width positionR">
+<div class="header-logo">
+<a href="/">
+<img width="440" height="65" src="/~/media/images/system/common/lenovo-for-those-who-do-logo.ashx" alt="lenovo" />
+</a></div>
+<a title="Print" href="javascript:window.print();" class="printIcon ft-print visible-desktop">Print </a>
+</div>
+<div class="reset"></div>
+</header>
+<div class="website-width visible-desktop over_page">
+<div class="overLinks"><a class="over_link">Support</a>
+<div class="overHideBox">
+<ul>
+    <li><a href="http://www.lenovo.com"><span style="color: #0070c0;">Shop</span></a></li>
+    <li><a href="http://www.lenovo.com/services"><span style="color: #0070c0;">Service</span></a></li>
+</ul>
+<br />
+<br />
+<strong><span style="text-decoration: underline;">Network Storage</span></strong>
+<ul>
+    <li><a href="http://www.lenovoemc.com/"><span style="color: #0070c0;">LenovoEMC</span></a></li>
+    <li><a href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen"><span style="color: #0070c0;">IBM</span></a></li>
+</ul>
+<br />
+<br />
+<strong><span style="text-decoration: underline;">Servers</span></strong>
+<ul>
+    <li><a href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen"><span style="color: #0070c0;">System x (IBM)</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+        
+
+<div id="country_switch" class="website-width visible-desktop over_page countrySwitchBox" data-jscomponent="CountrySwitch" data-selectedcountry="en-us">
+    <div class="overLinks">
+<form action="/services/us/en/countryswitch/getcountrylanguage?PageContext=Lenovo.ESupport.Business.Services.Context.PageContext&amp;CurrentUrl=%2Fproduct_security%2Fqemu" class="left-float" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="ChangeCountrySuccess()" data-ajax-update="#divCountryLanguages" id="GetCountryLanguagesForm" method="post">            <div id="countrySwitch" class="countrySwitch">
+                <cite class="hide"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</cite>
+                <ul>
+                        <li id ="RFS-Argentina"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Argentina" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_argentina.png" /></span>Argentina</a></li>
+                        <li id ="RFS-Australia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Australia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_australia.png" /></span>Australia</a></li>
+                        <li id ="RFS-Austria"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Austria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_austria.png" /></span>Austria</a></li>
+                        <li id ="RFS-Bangladesh"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bangladesh" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bangladesh.png" /></span>Bangladesh</a></li>
+                        <li id ="RFS-Belgium"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Belgium" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_belgium.png" /></span>Belgium</a></li>
+                        <li id ="RFS-Bolivia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bolivia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bolivia.png" /></span>Bolivia</a></li>
+                        <li id ="RFS-Brazil"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Brazil" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_brazil.png" /></span>Brazil</a></li>
+                        <li id ="RFS-Bulgaria"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bulgaria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bulgaria.png" /></span>Bulgaria</a></li>
+                        <li id ="RFS-Canada"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Canada" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_canada.png" /></span>Canada</a></li>
+                        <li id ="RFS-Chile"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Chile" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_chile.png" /></span>Chile</a></li>
+                        <li id ="RFS-Colombia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Colombia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_colombia.png" /></span>Colombia</a></li>
+                        <li id ="RFS-Croatia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Croatia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_croatia.png" /></span>Croatia</a></li>
+                        <li id ="RFS-Cyprus"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Cyprus" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_cyprus.png" /></span>Cyprus</a></li>
+                        <li id ="RFS-Czech Republic"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Czech Republic" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_czech_republic.png" /></span>Czech Republic</a></li>
+                        <li id ="RFS-Denmark"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Denmark" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_denmark.png" /></span>Denmark</a></li>
+                        <li id ="RFS-Ecuador"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ecuador" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_equador.png" /></span>Ecuador</a></li>
+                        <li id ="RFS-Egypt"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Egypt" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_egypt.png" /></span>Egypt</a></li>
+                        <li id ="RFS-Finland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Finland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_finland.png" /></span>Finland</a></li>
+                        <li id ="RFS-France"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/France" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_france.png" /></span>France</a></li>
+                        <li id ="RFS-Germany"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Germany" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_germany.png" /></span>Germany</a></li>
+                        <li id ="RFS-Greece"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Greece" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_greece.png" /></span>Greece</a></li>
+                        <li id ="RFS-Hong Kong"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hong Kong" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hong_kong.png" /></span>Hong Kong</a></li>
+                        <li id ="RFS-Hungary"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hungary" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hungary.png" /></span>Hungary</a></li>
+                        <li id ="RFS-India"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/India" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_india.png" /></span>India</a></li>
+                        <li id ="RFS-Indonesia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Indonesia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_indonesia.png" /></span>Indonesia</a></li>
+                        <li id ="RFS-Ireland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ireland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ireland.png" /></span>Ireland</a></li>
+                        <li id ="RFS-Israel"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Israel" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_israel.png" /></span>Israel</a></li>
+                        <li id ="RFS-Italy"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Italy" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_italy.png" /></span>Italy</a></li>
+                        <li id ="RFS-Japan"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Japan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_japan.png" /></span>Japan</a></li>
+                        <li id ="RFS-Korea"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Korea" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_korea.png" /></span>Korea</a></li>
+                        <li id ="RFS-Malaysia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Malaysia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_malaysia.png" /></span>Malaysia</a></li>
+                        <li id ="RFS-Mexico"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mexico" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mexico.png" /></span>Mexico</a></li>
+                        <li id ="RFS-Mongolia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mongolia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mongolia.png" /></span>Mongolia</a></li>
+                        <li id ="RFS-Morocco"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Morocco" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_morocco.png" /></span>Morocco</a></li>
+                        <li id ="RFS-Netherlands"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Netherlands" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_netherlands.png" /></span>Netherlands</a></li>
+                        <li id ="RFS-New Zealand"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/New Zealand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_new_zealand.png" /></span>New Zealand</a></li>
+                        <li id ="RFS-Nigeria"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Nigeria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_nigeria.png" /></span>Nigeria</a></li>
+                        <li id ="RFS-Norway"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Norway" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_norway.png" /></span>Norway</a></li>
+                        <li id ="RFS-Paraguay"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Paraguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_paraquay.png" /></span>Paraguay</a></li>
+                        <li id ="RFS-Peru"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Peru" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_peru.png" /></span>Peru</a></li>
+                        <li id ="RFS-Philippines"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Philippines" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_philippines.png" /></span>Philippines</a></li>
+                        <li id ="RFS-Poland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Poland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_poland.png" /></span>Poland</a></li>
+                        <li id ="RFS-Portugal"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Portugal" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_portugal.png" /></span>Portugal</a></li>
+                        <li id ="RFS-Romania"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Romania" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_romania.png" /></span>Romania</a></li>
+                        <li id ="RFS-Russia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Russia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_russia.png" /></span>Russia</a></li>
+                        <li id ="RFS-Saudi Arabia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Saudi Arabia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_saudi_arabia.png" /></span>Saudi Arabia</a></li>
+                        <li id ="RFS-Serbia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Serbia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_serbia_montenegro.png" /></span>Serbia</a></li>
+                        <li id ="RFS-Singapore"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Singapore" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_singapore.png" /></span>Singapore</a></li>
+                        <li id ="RFS-Slovakia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovakia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovakia.png" /></span>Slovakia</a></li>
+                        <li id ="RFS-Slovenia"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovenia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovenia.png" /></span>Slovenia</a></li>
+                        <li id ="RFS-South Africa"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/South Africa" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_africa.png" /></span>South Africa</a></li>
+                        <li id ="RFS-Spain"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Spain" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_spain.png" /></span>Spain</a></li>
+                        <li id ="RFS-Sri Lanka"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sri Lanka" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sri_lanka.png" /></span>Sri Lanka</a></li>
+                        <li id ="RFS-Sweden"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sweden" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sweden.png" /></span>Sweden</a></li>
+                        <li id ="RFS-Switzerland"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Switzerland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_switzerland.png" /></span>Switzerland</a></li>
+                        <li id ="RFS-Taiwan"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Taiwan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_taiwan.png" /></span>Taiwan</a></li>
+                        <li id ="RFS-Thailand"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Thailand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_thailand.png" /></span>Thailand</a></li>
+                        <li id ="RFS-Turkey"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Turkey" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_turkey.png" /></span>Turkey</a></li>
+                        <li id ="RFS-Ukraine"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ukraine" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ukraine.png" /></span>Ukraine</a></li>
+                        <li id ="RFS-United Arab Emirates"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Arab Emirates" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_united_arab_emirates.png" /></span>United Arab Emirates</a></li>
+                        <li id ="RFS-United Kingdom"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Kingdom" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_great_britain.png" /></span>United Kingdom</a></li>
+                        <li id ="RFS-United States"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United States" class="selected"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</a></li>
+                        <li id ="RFS-Uruguay"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Uruguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_uruquay.png" /></span>Uruguay</a></li>
+                        <li id ="RFS-US Downloads"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/US Downloads" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>US Downloads</a></li>
+                        <li id ="RFS-Venezuela"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Venezuela" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_venezuela.png" /></span>Venezuela</a></li>
+                        <li id ="RFS-Vietnam"><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Vietnam" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_vietnam.png" /></span>Vietnam</a></li>
+                </ul>
+            </div>
+            <input name="" type="hidden" value="" id="inputselectCountry" />
+            <input name="" type="hidden" value="#Please select Language#" id="SelectedLanguageTranslation" />
+<input id="SelectCountryPath" name="SelectCountryPath" type="hidden" value="" /></form>        <div id="divCountryLanguages" class="left-float">
+            <div id="languageSwitch" class="countrySwitch languageSwitch">
+    <cite class="hide" id="citeSelectLanguage">English</cite>
+    <ul>
+            <li id="RFS-English"><a href="/us/en/product_security/qemu" class="selected">English</a></li>
+    </ul>
+</div>
+<input name="" type="hidden" value="" id="inputselectLanguage" />
+        </div>
+    </div>
+</div>
+
+
+        
+
+<div class="website-width visible-desktop over_page servicer-login-box" style="display: none;">
+        <div class="servicer-login visible-desktop">
+            <a class="servicer-button" href="/us/en/servicerlogin?ReturnPage=https://support.lenovo.com/us/en/product_security/qemu" data-type="ServiceLoginUrlReplace">
+                Servicer Login
+            </a>
+        </div>
+    </div>
+
+    <div class="header-nav hide-desktop account-icon-location">
+        <a data-type="LinkUrlReplace" href="/services/us/en/accountlogin/lenovoidlogin?backUrl=https%3A%2F%2Fsupport.lenovo.com%2Fus%2Fen%2Fproduct_security%2Fqemu" class="header-nav-icon account-icon">#Account Title#</a>
+    </div>
+
+<div id="account_content" class="website-width visible-desktop over_page loginLinks account-login-box" checkloginurl="/services/us/en/accountlogin/islogin">
+    
+<div data-jscomponent="AccountLogin">
+
+        <div id="account-login" data-jscomponent="AccountLogin">
+            <div class="overLinks">
+                <a data-type="LinkUrlReplace" id="accountlogin" href="/services/us/en/accountlogin/lenovoidlogin?backUrl=https%3A%2F%2Fsupport.lenovo.com%2Fus%2Fen%2Fproduct_security%2Fqemu">Login</a>
+                <span class="line">|</span>
+                <a data-type="LinkUrlReplace" id="accountsignup" href="/services/us/en/accountlogin/lenovoidsignup?backUrl=https%3A%2F%2Fsupport.lenovo.com%2Fus%2Fen%2Fproduct_security%2Fqemu">Create Account</a>
+            </div>
+            <div id="ForgotPasswordView"></div>
+        </div>
+
+    <div id="link-accounts">
+    </div>
+</div>
+</div>
+
+
+        <div class="website-width header-search visible-desktop" data-jscomponent="MenuBar">
+    <ul class="header-subnav">
+                        <li><a href="/us/en" target="">Home</a></li>
+                    <li id="RFS-Get Started;">
+                        <a href="#" onclick=" testMenu() ">Get Started</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<div class="subnav-list-title">Tell me about my product</div>
+<ul>
+    <li><a href="/us/en/products/?tabName=Manuals">Manuals</a></li>
+    <li><a href="/us/en/products/?tabName=ProductParts">Specifications</a> </li>
+    <li><a href="/us/en/products/?tabName=Accessories">Accessories</a> </li>
+</ul>
+<div class="subnav-list-title">How to use </div>
+<ul>
+    <li><a href="/us/en/products/?tabName=Solutions">How To's</a>&nbsp;</li>
+    <li><a href="/us/en/products/?tabName=Video">Videos</a>&nbsp;</li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">Help me fix </div>
+<ul>
+    <li><a href="/us/en/products/?tabName=Solutions">Troubleshoot Solutions</a> </li>
+    <li><a href="/us/en/documents/ht004976">Diagnostics</a> </li>
+    <li><a href="/us/en/windows-support">Windows Support</a> </li>
+    <li><a href="http://forums.lenovo.com" target="_blank">Forums</a> </li>
+</ul>
+<div class="subnav-list-title">Get Software And Drivers </div>
+<ul>
+    <li><a href="/us/en/documents/ht080136">System Update</a> </li>
+    <li><a href="/us/en/products/?tabName=Downloads">Downloads by product</a></li>
+    <li><a href="/us/en/lenovodiagnosticsolutions">Lenovo Solutions Center</a> </li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">Repair and Service </div>
+<ul>
+    <li><a href="/us/en/depotstatus">Check Repair Status</a> </li>
+    <li><a href="/us/en/service-provider">Find a local authorized service provider</a> </li>
+</ul>
+<div class="subnav-list-title">Find Parts </div>
+<ul>
+    <li><a href="/us/en/products/?tabName=ProductParts">Product Parts Detail</a></li>
+    <li><a href="/us/en/partslookup">Parts Lookup</a></li>
+</ul>
+</div>
+
+
+                                    <div class="subNavColumn">
+<div style="display: inline-block; width: 100%; margin-top: 5px; cursor: pointer;">
+<a href="/us/en/documents/ht077986"><img style="max-width: 100%;" alt="assistedsearch" src="/~/media/images/banners/menubanners/assistedsearch.ashx?la=en" /></a>
+</div><div style="width: 100%; padding-top: 10px; display: inline-block; cursor: pointer;" onclick="window.open('http://ovp.lenovo.com/lenovo-ovp/public/showDetail!publicStatusIndex.action','_blank');">
+<img style="max-width: 100%;" alt="checkprodorder" src="/~/media/images/banners/menubanners/checkprdorder_en.ashx?la=en" />
+</div>                                    </div>
+                            </div>
+                    </li>
+                    <li id="RFS-Product Support;">
+                        <a href="#" onclick=" testMenu() ">Product Support</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<ul>
+    <li><a href="/us/en/products/?type=Desktops-and-all-in-ones&amp;c=1">Desktops &amp; All-in-Ones</a></li>
+    <li><a href="/us/en/documents/pd014572/?type=Desktops-and-all-in-ones&amp;c=1">Docking Stations</a></li>
+    <li><a href="/us/en/products/?type=Laptops-and-netbooks&amp;c=1">Laptops</a></li>
+    <li><a href="/us/en/products/?type=Monitors-and-projectors&amp;c=1">Monitors &amp; Projectors</a></li>
+    <li><a target="blank" href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen">Network Storage - IBM</a> </li>
+    <li><a target="blank" href="http://support.lenovoemc.com">Network Storage - LenovoEMC</a> </li>
+    <li><a href="/us/en/products/?type=Servers&amp;c=1">Servers - Lenovo</a></li>
+    <li><a target="blank" href="http://www-947.ibm.com/support/entry/portal/support?lnk=msdTS-supo-usen">Servers - System x (IBM)</a></li>
+    <li><a href="/us/en/products/?type=Phones&amp;c=1">Smartphones</a></li>
+    <li><a href="/us/en/products/?type=Tablets&amp;c=1">Tablets</a></li>
+    <li><a href="/us/en/documents/acc100199">ThinkPad Stack</a></li>
+    <li><a href="/us/en/products/?type=Workstations&amp;c=1">Workstations</a></li>
+    <li><a href="https://download.lenovo.com/eol/index.html" target="_blank">End-of-life Products (Archive)</a></li>
+</ul>
+</div>
+
+
+                            </div>
+                    </li>
+                    <li id="RFS-Enterprise Support;">
+                        <a href="#" onclick=" testMenu() ">Enterprise Support</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<div class="subnav-list-title">
+Downloads
+</div>
+<ul>
+    <li>ThinkVantage
+    <ul>
+        <li><a href="/us/en/documents/ht037696">Software</a></li>
+        <li><a href="/us/en/documents/ht037099">Admin Tools</a></li>
+        <li><a href="/us/en/documents/ht037099#ur">Update Retriever</a></li>
+        <li><a href="/us/en/documents/ht037099#ti">Thin Installer</a></li>
+    </ul>
+    </li>
+    <li><a href="/us/en/documents/ht074984">SCCM Driver Packs</a></li>
+    <li><a href="/us/en/lenovodiagnosticsolutions">Lenovo Solution Center Diagnostics</a></li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">
+Windows Support Center
+</div>
+<ul>
+    <li><a href="/us/en/documents/ht100092">Windows 8.1 Tested System List</a></li>
+    <li><a href="http://windows.microsoft.com/en-us/windows-8/update-from-windows-8-tutorial" target="_blank">Windows 8 Upgrade</a></li>
+</ul>
+<div class="subnav-list-title">
+Other
+</div>
+<ul>
+    <li><a href="/us/en/depotstatus">Check Repair status</a></li>
+    <li><a href="http://www.lenovoquickpick.com/" target="_blank">Options Configurator - Quick Pick</a> </li>
+    <li><a href="http://www.lenovo.com/training" target="_blank">Training</a></li>
+    <li><a href="/us/en/product_security">Product Security Advisories</a> </li>
+    <li><a href="http://forums.lenovo.com/t5/Enterprise-Management-Board/bd-p/sa01_eg" target="_blank">Enterprise Management Forum</a> </li>
+    <li><a href="/us/en/documents/ht100937">Top Priority Tips for ThinkServer RD550, RD650, TD350</a></li>
+</ul>
+</div>
+<div class="subNavColumn">
+<div class="subnav-list-title">
+Reference Documents
+</div>
+<ul>
+    <li><a href="/us/en/documents/pd100192">FRU Part Lists</a></li>
+    <li><a href="/us/en/products/?tabName=Manuals">User Guides</a></li>
+    <li><a href="http://www.lenovo.com/psref/" target="_blank">PSREF - Technical Specifications</a></li>
+    <li><a href="/us/en/documents/um006391">Options Compatibility Matrix (for Accessories)</a></li>
+</ul>
+<div class="subnav-list-title">
+Downgrade Kits
+</div>
+<ul>
+    <li><a href="/us/en/documents/ht101582">Windows Server 2012</a></li>
+</ul>
+</div>
+
+
+                                    <div class="subNavColumn">
+<div style="width: 100%; padding-top: 10px; display: inline-block; cursor: pointer;" onclick="window.open('/warrantylookup', '_self')">
+<img style="max-width: 100%;" alt="checkprodorder" src="/~/media/images/banners/menubanners/checkwarranty_en.ashx?la=en" />
+</div>                                    </div>
+                            </div>
+                    </li>
+                    <li id="RFS-Warranty;">
+                        <a href="#" onclick=" testMenu() ">Warranty</a>
+                            <div class="header-subnav-dropdown">
+                                <div class="subNavColumn">
+<ul>
+    <li><a href="/us/en/warrantylookup">Check Warranty Status</a></li>
+    <li><a href="/us/en/contactus/upgradewarranty">Extend/Upgrade Warranty</a></li>
+    <li><a href="/us/en/contactus/basewarrantyregistration">Base Warranty Registration</a></li>
+    <li><a href="/us/en/contactus/warrantyupgraderegistration">Warranty Upgrade Registration</a></li>
+    <li><a href="/us/en/iwslookupthink">International Warranty Services</a></li>
+    <li><a href="/us/en/documents/ht101049">Accidental Damage Protection Services Agreement</a></li>
+    <li><a href="/us/en/documents/ht101058">Warranty Services Agreement</a></li>
+    <li><a href="/us/en/warrantylookup/warrantypolicy_pc">Warranty Policies</a></li>
+</ul>
+</div>
+
+
+                                    <div class="subNavColumn">
+<a href="/us/en/documents/ht002608 " style="text-decoration: none;">
+<div style="display: inline-block; position: relative; width: 130px; float: left; border: 2px solid #3e8ddd !important; bottom: 0px !important;">
+<div>
+<img alt="" src="/~/media/images/2015/alert.ashx?la=en&amp;h=30&amp;w=30" style="height: 30px; width: 30px; position: relative; float: left; padding-top: 2px; padding-left: 2px; padding-bottom: 2px;" />
+</div>
+<div style="position: relative; float: left; margin: 0px auto; vertical-align: middle; padding-top: 8px; padding-left: 15px;">Recall Page</div>
+</div>
+</a>                                    </div>
+                            </div>
+                    </li>
+                        <li><a href="http://www.lenovo.com/services" target="_blank">Services</a></li>
+                        <li><a href="/us/en/globalproductselector?returnurl=ForContactUs" target="">Contact Us</a></li>
+    </ul>
+</div>
+
+        
+        <!-- AddThis Button BEGIN -->
+        <div id="SocialShare" data-jscomponent="SocialShare" class="addthis_toolbox addthis_default_style website-width visible-desktop" addthis:url="www.lenovo.com">
+            <a class="addthis_button_compact"></a>
+        </div>
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact:'' 
+    };
+</script> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-531e6ee80c6ae512"></script>
+<!-- AddThis Button END -->
+
+
+<div data-jscomponent="SiteSearchBox">
+    <div class="header-nav hide-desktop search-icon-location">
+        <a class="header-nav-icon search-icon">Search</a>
+    </div>
+
+    <div class=" hide-desktop">
+        <div class="website-width header-search">
+<form action="/services/us/en/sitesearchbox/searchbox" method="post"><input id="SiteLanguage" name="SiteLanguage" type="hidden" value="en-US" /><input data-val="true" data-val-regex="The field &#39;#SiteSearchKey#&#39; must match the regular expression &#39;[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*&#39;." data-val-regex-pattern="[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*" data-val-required="The &#39;#SiteSearchKey#&#39; field is required." id="SiteSearchKey" name="SiteSearchKey" placeholder="Search Key Word" type="text" value="" /></form>            <a class="searchFormButton"></a>
+            <div class="reset"></div>
+        </div>
+    </div>
+
+    <div class="website-width header-search visible-desktop">
+        <div class="header-search-desktop">
+<form action="/services/us/en/sitesearchbox/searchbox" method="post"><input id="SiteLanguage" name="SiteLanguage" type="hidden" value="en-US" /><input data-val="true" data-val-regex="The field &#39;#SiteSearchKey#&#39; must match the regular expression &#39;[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*&#39;." data-val-regex-pattern="[^\&lt;\>\@\&amp;\;\$\[\]\(\)\{\}\#\~]*" data-val-required="The &#39;#SiteSearchKey#&#39; field is required." id="SiteSearchKey" name="SiteSearchKey" placeholder="Search Key Word" type="text" value="" /></form>            <a class="searchFormButton"></a>
+        </div>
+    </div>
+</div>
+
+        
+
+
+<span style="display: none" id="opinionIcoText">Click here to rate this page</span>
+        
+
+<div class="mobile-nav"></div>
+<div class="mobile-nav-wrapper" data-jscomponent="NavigationBar" data-selectedcountry="en-us">
+    <div class="mobile-nav-close"></div>
+    <div class="reset"></div>
+    <div class="mobile-nav-items-wrapper">
+        <ul class="mobile-nav-items">
+            <li class="nav-lang">
+                <span class="nav-ico-lang"></span>
+<form action="/services/us/en/navigationbar/getcountrylanguage?PageContext=Lenovo.ESupport.Business.Services.Context.PageContext&amp;CurrentUrl=%2Fproduct_security%2Fqemu" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="ChangeNavCountrySuccess()" data-ajax-update="#divNavCountryLanguages" id="NavGetCountryLanguagesForm" method="post">                    <div id="mobileCountrySwitch" class="mobileCountrySwitch">
+                        <cite class="hide"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</cite>
+                        <ul>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Argentina" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_argentina.png" /></span>Argentina</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Australia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_australia.png" /></span>Australia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Austria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_austria.png" /></span>Austria</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bangladesh" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bangladesh.png" /></span>Bangladesh</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Belgium" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_belgium.png" /></span>Belgium</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bolivia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bolivia.png" /></span>Bolivia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Brazil" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_brazil.png" /></span>Brazil</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Bulgaria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_bulgaria.png" /></span>Bulgaria</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Canada" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_canada.png" /></span>Canada</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Chile" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_chile.png" /></span>Chile</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Colombia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_colombia.png" /></span>Colombia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Croatia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_croatia.png" /></span>Croatia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Cyprus" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_cyprus.png" /></span>Cyprus</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Czech Republic" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_czech_republic.png" /></span>Czech Republic</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Denmark" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_denmark.png" /></span>Denmark</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ecuador" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_equador.png" /></span>Ecuador</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Egypt" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_egypt.png" /></span>Egypt</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Finland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_finland.png" /></span>Finland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/France" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_france.png" /></span>France</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Germany" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_germany.png" /></span>Germany</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Greece" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_greece.png" /></span>Greece</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hong Kong" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hong_kong.png" /></span>Hong Kong</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Hungary" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_hungary.png" /></span>Hungary</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/India" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_india.png" /></span>India</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Indonesia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_indonesia.png" /></span>Indonesia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ireland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ireland.png" /></span>Ireland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Israel" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_israel.png" /></span>Israel</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Italy" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_italy.png" /></span>Italy</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Japan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_japan.png" /></span>Japan</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Korea" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_korea.png" /></span>Korea</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Malaysia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_malaysia.png" /></span>Malaysia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mexico" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mexico.png" /></span>Mexico</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Mongolia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_mongolia.png" /></span>Mongolia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Morocco" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_morocco.png" /></span>Morocco</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Netherlands" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_netherlands.png" /></span>Netherlands</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/New Zealand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_new_zealand.png" /></span>New Zealand</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Nigeria" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_nigeria.png" /></span>Nigeria</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Norway" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_norway.png" /></span>Norway</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Paraguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_paraquay.png" /></span>Paraguay</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Peru" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_peru.png" /></span>Peru</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Philippines" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_philippines.png" /></span>Philippines</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Poland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_poland.png" /></span>Poland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Portugal" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_portugal.png" /></span>Portugal</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Romania" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_romania.png" /></span>Romania</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Russia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_russia.png" /></span>Russia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Saudi Arabia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_saudi_arabia.png" /></span>Saudi Arabia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Serbia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_serbia_montenegro.png" /></span>Serbia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Singapore" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_singapore.png" /></span>Singapore</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovakia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovakia.png" /></span>Slovakia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Slovenia" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_slovenia.png" /></span>Slovenia</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/South Africa" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_south_africa.png" /></span>South Africa</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Spain" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_spain.png" /></span>Spain</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sri Lanka" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sri_lanka.png" /></span>Sri Lanka</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Sweden" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_sweden.png" /></span>Sweden</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Switzerland" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_switzerland.png" /></span>Switzerland</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Taiwan" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_taiwan.png" /></span>Taiwan</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Thailand" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_thailand.png" /></span>Thailand</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Turkey" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_turkey.png" /></span>Turkey</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Ukraine" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_ukraine.png" /></span>Ukraine</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Arab Emirates" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_united_arab_emirates.png" /></span>United Arab Emirates</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United Kingdom" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_great_britain.png" /></span>United Kingdom</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/United States" class="selected"><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>United States</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Uruguay" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_uruquay.png" /></span>Uruguay</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/US Downloads" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_usa.png" /></span>US Downloads</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Venezuela" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_venezuela.png" /></span>Venezuela</a></li>
+                                <li><a data-path="/sitecore/content/Sites/ESupport/Configurations/Countries/Vietnam" class=""><span class="flagImage"><img src="/~/icon/Flags/32x32/flag_vietnam.png" /></span>Vietnam</a></li>
+                        </ul>
+                    </div>
+    <input name="" type="hidden" value="" id="inputMobileCountry" />
+<input id="SelectNavCountryPath" name="SelectNavCountryPath" type="hidden" value="" />    <input name="" type="hidden" value="#Please select Language#" id="SelectedLanguageTranslation" />
+</form>                <div id="divNavCountryLanguages">
+                    <div id="mobileLanguageSwitch" class="mobileCountrySwitch mobileLanguageSwitch">
+    <cite class="hide" id="citeSelectLanguage">English</cite>
+    <ul>
+            <li><a href="/us/en/product_security/qemu" class="selected">English</a></li>
+    </ul>
+</div>
+<input name="" type="hidden" value="" id="inputMobileLanguage" />
+                </div>
+            </li>
+            
+
+
+                        <li>
+                            <a href="http://mobilesupport.lenovo.com">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_home.ashx' class='nav_ico' alt='Home' height='34' width='34' />
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/getstarted">
+                                <img src='/~/media/images/system/icon/navigation%20bar/getstarted.ashx' class='nav_ico' alt='getstarted' height='34' width='34' />
+                                Get Started
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/products">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_card.ashx' class='nav_ico' alt='prodsupport' height='34' width='34' />
+                                Product Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:window.open(&quot;/Products/?tabName=Downloads&quot;,&quot;_self&quot;)">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_download.ashx' class='nav_ico' alt='downloads' height='34' width='34' />
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:window.open(&quot;/Products/?tabName=Manuals&quot;,&quot;_self&quot;)">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_manuals.ashx' class='nav_ico' alt='manuals' height='34' width='34' />
+                                Manuals
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/find-solution">
+                                <img src='/~/media/images/system/icon/navigation%20bar/ico_contact.ashx' class='nav_ico' alt='solutions' height='36' width='36' />
+                                Find Solutions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:window.open(&quot;/Products/?tabName=Video&quot;,&quot;_self&quot;)">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_video.ashx' class='nav_ico' alt='videos' height='34' width='34' />
+                                Video Tutorials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.lenovo.com">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_bag.ashx' class='nav_ico' alt='Lenovo Shop' height='34' width='34' />
+                                Lenovo Shop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/enterprisesupport">
+                                <img src='/~/media/images/system/icon/navigation%20bar/enterprise.ashx' class='nav_ico' alt='enterprise' height='34' width='34' />
+                                Enterprise Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/warrantylookup">
+                                <img src='/~/media/images/system/icon/navigation%20bar/ico_warranty.ashx' class='nav_ico' alt='warranty' height='36' width='36' />
+                                Warranty Lookup
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.lenovo.com/services">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_services.ashx' class='nav_ico' alt='services' height='34' width='34' />
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/us/en/contactus">
+                                <img src='/~/media/images/system/icon/navigation%20bar/iconav_community.ashx' class='nav_ico' alt='contactus' height='34' width='34' />
+                                Contact Us
+                            </a>
+                        </li>
+            <li>
+ 
+                <a href="#" data-type="ServicerLoginUrl">
+                    <img src="/~/media/images/system/icon/navigation bar/iconav_login.ashx" class="nav_ico" alt="Services" height="34" width="34">
+                    Servicer Login
+                </a> 
+            </li>
+        </ul>
+    </div>
+</div>
+
+        <div class="website-width website-body">
+
+            
+
+
+
+
+            
+<div class="small-header">
+    <div class="small-header-wrapper">
+            <!--bread-crumb to do  -->
+                <div class="bread-crumb">
+                    <a href="/us/en">Official Lenovo Support Home</a>
+            &gt;
+                    <a href="/us/en/product_security">Lenovo Product Security Advisories</a>
+            &gt;
+QEMU i8254 PIT Emulation Bug    </div>
+    <div class="reset"></div>
+
+        <div class="reset"></div>
+        <h2 class="small-header-title hide-phone">QEMU i8254 PIT Emulation Bug</h2>
+    </div>
+</div>
+<div class="content-wrapper">
+    
+<div data-jscomponent="RichText">
+                <strong>Lenovo Security Advisory:</strong> LEN-2015-075<br />
+<strong>Potential Impact:</strong> Escalation of Privileges<br />
+<strong><strong><a href="/us/en/documents/ht100758">Severity</a></strong></strong>:&nbsp;High<br />
+<br />
+<strong>Summary:</strong><br />
+A vulnerability was reported in QEMU where a local user on the guest system could potentially obtain elevated privileges on the target host system. This vulnerability was reported to Red Hat and has been assigned CVE-2015-3214.<br />
+<br />
+<strong>Description:</strong><br />
+QEMU is a generic and open source machine emulator and virtualizer and is used as a foundation and hardware emulation layer for running virtual machines under the Xen and KVM/QEMU hypervisors.<br />
+A local privileged user on a guest system that has QEMU programmable interval timer (PIT) enabled can issue a specially crafted read request from the PIT Mode/Command register to obtain potentially sensitive information or cause memory corruption and execute arbitrary code on the target host system.&nbsp;<br />
+This vulnerability affects certain LenovoEMC px12 products and has been fixed in code version 1.0.10.33264 and above. <br />
+<br />
+<p><strong>Mitigation Strategy for Customers (what you should do to protect yourself):</strong><br />
+Update your product to the latest levels using the steps below:</p>
+<p><br />
+</p>
+<div>
+<p><strong>Product Impact:</strong><br />
+Please apply the latest versions of the following software updates:</p>
+<p><strong></strong></p>
+<table border="1" cellspacing="0" cellpadding="0" width="2106" style="margin-left: 4.85pt; border-collapse: collapse;">
+    <tbody>
+    </tbody>
+</table>
+<table border="1">
+    <tbody>
+        <tr>
+            <td><strong>Product Affected<br />
+            </strong></td>
+            <td><strong>Fix Version<br />
+            </strong></td>
+            <td><strong>Update Instructions<br />
+            </strong></td>
+            <td><strong>Software fix location:&nbsp;</strong></td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">LenovoEMC px12-400r IVX application<br />
+            </td>
+            <td style="text-align: left;">Version 1.0.10.33264 and later<br />
+            </td>
+            <td style="text-align: left;">See&nbsp;<a href="http://download.lenovo.com/nasupdate/help/lifeline/4.1a/px12-400r/en_US/Content/software_update.html">http://download.lenovo.com/nasupdate/help/lifeline/4.1a/px12-400r/en_US/Content/software_update.html</a> for instructions on updating to the latest software version<br />
+            </td>
+            <td>
+            <p style="text-align: left;"><a href="http://lifelineapps.com/?user_lang=en&amp;device=px12450r&amp;version=&amp;category=&amp;sort=1&amp;redirect_url=">http://lifelineapps.com/?user_lang=en&amp;device=px12450r&amp;version=&amp;category=&amp;sort=1&amp;redirect_url=</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">LenovoEMC px12-450r IVX application<br />
+            </td>
+            <td style="text-align: left;">Version 1.0.10.33264 and later<br />
+            </td>
+            <td>See&nbsp;<a href="http://download.lenovo.com/nasupdate/help/lifeline/4.1a/px12-450r/en_US/Content/software_update.html">http://download.lenovo.com/nasupdate/help/lifeline/4.1a/px12-450r/en_US/Content/software_update.html</a> for instructions on updating to the latest software version<br />
+            </td>
+            <td style="text-align: left;"><a href="http://lifelineapps.com/?user_lang=en&amp;device=px12450r&amp;version=&amp;category=&amp;sort=1&amp;redirect_url=">http://lifelineapps.com/?user_lang=en&amp;device=px12450r&amp;version=&amp;category=&amp;sort=1&amp;redirect_url=</a></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<div><br />
+<strong>Other information and references:</strong>
+<ul>
+    <li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3214">
+    <p>http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3214</p>
+    </a></li>
+</ul>
+<br />
+<strong>Revision History:<br />
+<table cellspacing="0" cellpadding="0" border="1" style="border-collapse: collapse; border: medium none;">
+    <tbody>
+        <tr>
+            <td valign="top" style="width: 159.6pt; border: 1pt solid windowtext; padding: 0in 5.4pt; background-color: black;">
+            <p style="color: white;"><strong>Revision</strong></p>
+            </td>
+            <td valign="top" style="width: 159.6pt; border-style: solid solid solid none; border-top-width: 1pt; border-top-color: windowtext; border-right-width: 1pt; border-right-color: windowtext; border-bottom-width: 1pt; border-bottom-color: windowtext; padding: 0in 5.4pt; background-color: black;">
+            <p style="color: white;"><strong>Date</strong></p>
+            </td>
+            <td valign="top" style="width: 159.6pt; border-style: solid solid solid none; border-top-width: 1pt; border-top-color: windowtext; border-right-width: 1pt; border-right-color: windowtext; border-bottom-width: 1pt; border-bottom-color: windowtext; padding: 0in 5.4pt; background-color: black;">
+            <p style="color: white;"><strong>Description</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="font-weight: normal;">&nbsp;1.0</span></td>
+            <td><span style="font-weight: normal;">&nbsp;21 Jul 2015</span></td>
+            <td><span style="font-weight: normal;">&nbsp;Initial release</span></td>
+        </tr>
+    </tbody>
+</table>
+</strong></div>
+</div>
+</div>
+</div>
+
+        </div>
+
+        <footer class="footerBg">
+    <div class="website-width">
+<div class="footer-wrapper">
+<div class="fluid-row">
+<div style="margin-left: 75px;" class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px;"><a target="_top" style="font-family: arial, Helvetica, sans-serif; font-weight: bold; color: #ffffff; line-height: 18px; text-decoration: none;" href="http://www.lenovo.com/lenovo/us/en/index.html?ref-id=support&amp;">ABOUT LENOVO</a></h5>
+</div>
+<ul class="footer-list">
+    <li><a href="http://www.lenovo.com/lenovo/us/en/our_company.html?ref-id=support&amp;">Our Company</a> </li>
+    <li><a href="http://news.lenovo.com/?ref-id=support&amp;">News</a> </li>
+    <li><a href="http://www.lenovo.com/ww/lenovo/investor_relations.html?ref-id=support&amp;">Investor Relations</a> </li>
+    <li><a href="http://www.lenovo.com/social_responsibility/us/en/index.html?ref-id=support&amp;">Social responsibility</a> </li>
+    <li><a href="http://www.lenovo.com/compliance">Product Compliance</a> </li>
+    <li><a href="http://www.lenovo.com/legal/us/en/?ref-id=support&amp;">Legal information</a> </li>
+    <li><a href="http://www.lenovo.com/jobs/us/en/index.html?ref-id=support&amp;">Jobs at Lenovo</a> </li>
+    <li><a href="http://www.lenovo.com/articles/us/en/">Articles</a> </li>
+</ul>
+</div>
+<div class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px; text-transform: uppercase;"><a target="_top" style="font-family: arial, Helvetica, sans-serif; font-weight: bold; color: #ffffff; line-height: 18px; text-decoration: none;" href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Portals/Products&amp;ref-id=support&amp;">SHOP</a> </h5>
+</div>
+<ul class="footer-list">
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:CompareByNeed?current-category-id=653343E0DE54435882FABC3CE1BC569A&amp;menu-id=products&amp;current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;ref-id=support&amp;">Laptops &amp; netbooks</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:category.details?current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;current-category-id=F711F204FCB6F694B7E57D36CC727E1E">Tablets</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:show-category?category-id=FFA158AAECE944CD9055899B3280EA36&amp;current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;ref-id=support&amp;">Desktops &amp; all-in-ones</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Landing_pages/Info/09/Workstation&amp;ref-id=support&amp;">Workstations</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Landing_pages/ThinkServer/08/Introducing&amp;ref-id=support&amp;">Servers</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/catalog.workflow:show-category-with-items?category-id=9B7E41BDCE704020B8E567C67D3FA082&amp;current-catalog-id=12F0696583E04D86B9B79B0FEC01C087&amp;ref-id=support&amp;">Accessories &amp; upgrades</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Special%20Offers/Overview&amp;ref-id=support&amp;">Special offers</a> </li>
+    <li><a href="http://outlet.lenovo.com/?ref-id=support&amp;">Outlet</a> </li>
+</ul>
+</div>
+<div class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px; text-transform: uppercase;">Support </h5>
+</div>
+<ul class="footer-list">
+    <li><a data-type="ServicerLoginUrl" href="#">Servicer Login</a> </li>
+    <li><a href="/products?tabName=Downloads">Downloads</a> </li>
+    <li><a href="/products?tabName=Manuals">Manuals</a> </li>
+    <li><a href="/products?tabName=Video">Videos</a> </li>
+    <li><a href="/find-solution?tabName=Solutions">Solutions</a> </li>
+    <li><a href="/us/en/warrantylookup">Warranty Lookup</a> </li>
+    <li><a href="/us/en/preproductselect">Contact Us</a> </li>
+    <li><a href="/us/en/supportphonelist_full">Phone List</a></li>
+    <li><a href="http://support.lenovoemc.com">Storage Support</a> </li>
+</ul>
+</div>
+<div class="cell2  visible-desktop">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px; text-transform: uppercase;">Resources </h5>
+</div>
+<ul class="footer-list">
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Landing_pages/Lenovo_general/reseller_locator&amp;ref-id=support&amp;">Where to buy</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Shopping_FAQ/shopping_faq&amp;ref-id=support&amp;">Shopping help</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/special-offers.workflow:ShowPromo?LandingPage=/All/US/Shopping_FAQ/order-status&amp;ref-id=support&amp;">Order status</a> </li>
+    <li><a href="http://lenovosocial.com/">Blogs &amp; forums</a> </li>
+    <li><a href="http://www.lenovo.com/training/?ref-id=support&amp;">Training</a> </li>
+    <li><a href="http://shop.lenovo.com/SEUILibrary/controller/e/web/LenovoPortal/en_US/account.workflow:StartSignUpCommPreference?ref-id=support&amp;">Email signup</a> </li>
+    <li><a href="http://www.lenovo.com/registration/index.html?ref-id=support&amp;">Product registration</a> </li>
+</ul>
+</div>
+<div class="cell3">
+<div class="footer-title">
+<h5 style="margin-bottom: 10px;">FOLLOW US</h5>
+</div>
+<ul class="footer-icon-list">
+    <li><a title="Google+" href="https://plus.google.com/115831017343671643958"><span class="icon ft-gplus">Google+</span></a></li>
+    <li><a title="Twitter" href="http://twitter.com/lenovo"><span class="icon ft-twitter">Twitter</span> </a></li>
+    <li><a title="Facebook" href="http://www.facebook.com/lenovo"><span class="icon ft-facebook">Facebook</span> </a></li>
+    <li><a title="Flickr" href="http://www.flickr.com/photos/lenovophotolibrary/collections/"><span class="icon ft-flickr">Flickr</span> </a></li>
+    <li><a title="YouTube" href="http://www.youtube.com/lenovovision"><span class="icon ft-youtube">YouTube</span> </a></li>
+    <li><a title="Lenovo Forums" href="http://forums.lenovo.com/"><span class="icon ft-forums">Lenovo Forums</span> </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div style="padding-right: 0px;" class="footer-bottom">
+<p class="footer-wrapper">
+<a style="color: #a7a7a7;" href="javascript:void(0);">&copy; 2015 Lenovo. All rights reserved.</a> |
+<a style="color: #a7a7a7;" href="javascript:window.print();">Print this page</a> |
+<a style="color: #a7a7a7;" href="http://shop.lenovo.com/us/en/legal/">Terms of use</a> |&nbsp;
+<a style="color: #a7a7a7;" href="http://www.lenovo.com/privacy/us/en/">Privacy</a> |
+<a href="/us/en/sitemap">Site map</a>
+</p>
+<p class="footer-wrapper">
+<a href="/us/en/browsercompatibility">Browser Compatibility</a>
+</p>
+</div>
+<!-- added by Vikram on 5/28 -->
+<!--
+<div class="footer-bottom" style="padding-right: 0px;">
+<p class="footer-wrapper">
+<a href="http://10.38.24.30:8080/browser-compatibility.html">Browser Compatibility</a>
+</p>
+</div>
+-->
+</footer>
+
+
+
+<div class="ui-widget" data-jscomponent="CookieBar">
+    <div class="cookie-message ui-widget-header blue">
+        <p>By using this website you allow us to place cookies on your computer. They are harmless and never personally identify you.</p>
+        <a class="close-button">Continue</a>
+    </div>
+</div>
+
+
+<div data-jscomponent="GoogleAnalytics">
+    <div style="display: none" id="apiKey">UA-20013709-3</div>
+    <div style="display: none" id="hassiteSpeed">True</div>
+    <div style="display: none" id="setSiteSpeed">100</div>
+</div>
+
+        <script src="/bundles/jquery?v=fSzuJDr9A7W546aIJmYa1W3OK3f1ezYNdk92s8jr9kE1"></script>
+
+        <script src="/bundles/CountrySwitch?v=nzlbzF4pRRPqzyPaPhQwVLPP0kUrKKuBqx8aOwY0Kws1"></script>
+<script src="/bundles/accountLogin?v=YWczejRubfgDKGj1M5L8VaAo1QQTVWm_D2OBVgATdkQ1"></script>
+<script src="/bundles/contacts?v=vO7FVCdPHBO2-wL-8-pwipOyRmau7yuE7nN_9IAjR3w1"></script>
+<script src="/bundles/opinionlab?v=jr8CtCI2XLKAokMNdu2ZquLBVBTDRVwEXpvgPmf8FS41"></script>
+<script src="/bundles/navigationbar?v=ogs_DeUK0NeLyoH8xvQ42SlVJUIaaADfs-XO3lpCevo1"></script>
+<script src="/bundles/BrowserVersion?v=d12U-K8sPZqYPhJY0INS6G3U_19Ot8ULXI-pAKWLBnQ1"></script>
+<script src="/bundles/RichText?v=-XdvhT--31p8IZQSxx1w_Cvs-VJp3AnRm7j3U88kyqU1"></script>
+<script src="/bundles/cookieBar?v=qGMW1GrBcxvPG0VbwhgCos5vcIROwnxymx5Cm9Z-MCQ1"></script>
+<script src="/bundles/GoogleAnalytics?v=2qE_SH5wbo97ldeNrf5W4WnBmNtMHW170_3uKTWyi881"></script>
+
+
+        
+            <script type="text/javascript">
+                if (typeof _satellite != 'undefined')
+                    _satellite.pageBottom();
+            </script>
+    </body>
+</html>

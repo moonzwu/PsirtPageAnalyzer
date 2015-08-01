@@ -1,13 +1,16 @@
 import unittest
 import bs4
-from pagecreeper import *;
+import html2text
+from BusinessUnit import BusinessUnit
+from Product import Product
+from pagecreeper import *
 
 
 class PageCreeperTest(unittest.TestCase):
     """test PageCreeper class functions"""
 
     def createSoupByTestFile(self, htmFile="testdata/lenovo_fpr.htm"):
-        file = open(htmFile, "r")
+        file = open(htmFile, "r", encoding='utf8')
         html = file.read()
         file.close()
         soup = bs4.BeautifulSoup(html)
@@ -66,6 +69,21 @@ class PageCreeperTest(unittest.TestCase):
         buildRelationShipInVulBUProd(bu, products, '')
         self.assertEqual(len(bu.productCodeList), 3)
         self.assertEqual(bu.productCodeList[0], 'RD530')
+
+    def test_should_not_get_any_valid_CVE_codes(self):
+        soup = self.createSoupByTestFile("testdata/qemu.html")
+        txt = selectValidCVETextBlock(soup.select('div.content-wrapper')[0])
+        cves = extractCVEcode(txt)
+
+        self.assertEqual(len(cves), 0)
+
+    def test_should_get_valid_CVE_codes(self):
+        soup = self.createSoupByTestFile("testdata/S3.htm")
+        txt = selectValidCVETextBlock(soup.select('div.content-wrapper')[0])
+        cves = extractCVEcode(txt)
+
+        self.assertEqual(len(cves), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
