@@ -33,7 +33,14 @@ def selectValidCVETextBlock(entireVulContent):
         validCVEContent = html2text.html2text(li.get_text())
         if (validCVEContent.find("CVE ID:") != -1):
             return validCVEContent
-    return ''
+
+    # deal with the no <li> tag for CVE ID case
+    vulTxtContent = html2text.html2text(entireVulContent.get_text())
+    startPos = vulTxtContent.find("CVE ID:")
+    if (startPos != -1):
+        return vulTxtContent[startPos:]
+    else:
+        return ''
 
 def parseVulRow(tableRow):
     tdElems = tableRow.find_all('td')

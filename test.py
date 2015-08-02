@@ -77,7 +77,14 @@ class PageCreeperTest(unittest.TestCase):
 
         self.assertEqual(len(cves), 0)
 
-    def test_should_get_valid_CVE_codes(self):
+    def test_should_get_valid_CVE_codes_without_li(self):
+        soup = self.createSoupByTestFile("testdata/usbenhancedkeyboard.html")
+        txt = selectValidCVETextBlock(soup.select('div.content-wrapper')[0])
+        cves = extractCVEcode(txt)
+
+        self.assertEqual(len(cves), 1)
+
+    def test_should_get_valid_CVE_codes_with_li(self):
         soup = self.createSoupByTestFile("testdata/S3.htm")
         txt = selectValidCVETextBlock(soup.select('div.content-wrapper')[0])
         cves = extractCVEcode(txt)
